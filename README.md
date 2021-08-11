@@ -1,9 +1,12 @@
-# Webpack-base
+# VGE Ingeniería
 
-Base Webpack listo para usar en nuevos proyectos
+✅ Base Webpack
 
-### Uso
+- Estructura HTML
+- Estilos CSS
+- Interacción Js
 
-- Iniciar new repo en Github
-- En terminal usar "git remote set-url origin [repo]" para setear repositorio remoto
-- Instalar variable de enterno en Netlify en caso de uso
+## Por hacer
+
+- Submenu Nuestros Servicios
+- Agregar transiciond entrada al menu mobile

@@ -1,0 +1,33 @@
+//Animation menu-offcanvas
+@keyframes slide-in {
+    from {
+        // visibility: hidden;
+        // opacity: 0;
+        transform: translatex(100%);
+    }
+    1% {
+        visibility: visible;
+        // opacity: 0;
+    }
+    to {
+        transform: translatex(0);
+        // opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slide-in 300ms ease-in-out forwards;
+}
+
+@keyframes slide-out {
+    from {
+        transform: translatex(0);
+    }
+    to {
+        transform: translatex(100%);
+    }
+}
+
+.slide-out {
+    animation: slide-out 300ms ease-in-out forwards;
+}

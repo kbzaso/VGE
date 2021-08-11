@@ -1,0 +1,52 @@
+.hero {
+    &__blend {
+        background-color: $vgeBlue;
+        // mix-blend-mode: multiply;
+        height: calc(100vh - 8rem);
+        width: 100vw;
+        position: absolute;
+        top: 8rem;
+        opacity: 85%;
+    }
+    &__image {
+        background-image: url(./../images/bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: calc(100vh - 8rem);
+    }
+    &__text {
+        // z-index: 2;
+        padding: 3rem 3rem;
+        max-width: 600px;
+        color: $vgeWhite;
+        margin: 0 auto;
+        position: absolute;
+        top: 33%;
+        line-height: 1.5;
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            .underline {
+                line-height: 1rem;
+                /* Positive value. */
+                vertical-align: 1rem;
+                /* Positive value. */
+                border-bottom: 0.8rem solid transparent;
+                // -moz-border-image: -moz-linear-gradient(left, #a8dbed 0%, #e291e6 100%);
+                // -webkit-border-image: -webkit-linear-gradient( left, #a8dbed 0%, #e291e6 100%);
+                border-color: $vgeOrange;
+                border-image-slice: 1;
+                span {
+                    vertical-align: -0.8rem;
+                }
+            }
+        }
+        p {
+            padding-top: 3rem;
+            font-size: $font-lg;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+}

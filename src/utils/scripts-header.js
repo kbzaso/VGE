@@ -1,12 +1,3 @@
-import Template from '@templates/template.js';
-import '@styles/main.scss';
-// import logo from '@images/vge-logo.svg';
-
-(async function App() {
-    const main = null || document.getElementById('main');
-    main.innerHTML = Template();
-})();
-
 const btnHamburger = document.getElementById('btnHamburger');
 const header = document.querySelector('.header');
 const overlay = document.querySelector('.overlay');

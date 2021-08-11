@@ -1,11 +1,6 @@
-section {
-    background-color: aquamarine;
-    width: 400px;
-    height: auto;
-    padding: 40px;
-}
-
-h1 {
-    font-size: 24px;
-    color: yellow;
-}
+@import 'variables';
+@import 'mixins';
+@import 'animation';
+@import 'globals';
+@import 'header';
+@import 'hero';
