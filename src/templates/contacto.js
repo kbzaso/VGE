@@ -29,19 +29,23 @@ const Contacto = () => {
           
           <div class="checkbox">
             <legend>Horario de preferencia</legend>
-            <label for="pm">
-              <input id='pm' name='pm' type="checkbox">
+            <label class='check-container' for="am">
+              <input id='am' name='am' type="checkbox">
+              <span class="checkmark"></span>
               AM
             </label>
             
+            <label class='check-container' for="pm">
             <input id='pm' name='pm' type="checkbox">
-            <label for="pm">PM</label>
+            <span class="checkmark"></span>
+            PM
+            </label>
           </div>
         </div>
 
         <div class="message">
         <label for="message">Mensaje</label>
-        <textarea rows="6" id='message' placeholder='Hola VGE, tengo un proyecto en mente...' name='message'> </textarea>
+        <textarea rows="6" id='message' placeholder='Hola VGE, tengo un proyecto en mente...' name='message'></textarea>
         </div>
         <input class='form__button' type="button" value='Enviar'>
         

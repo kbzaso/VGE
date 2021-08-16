@@ -3,8 +3,8 @@
 import logo from '@images/vge-logo.svg';
 const Footer = () => {
     const view = `
-<div class="footer container">
-    <a href="" class='footer__logo hide-for-mobile'>
+<div class="footer container container--px">
+    <a href="/" class='footer__logo hide-for-mobile'>
         <img src="${logo}" alt="Logotipo VGE Ingenieria">
     </a>
     <div class="footer__menu">

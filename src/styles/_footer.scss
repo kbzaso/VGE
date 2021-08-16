@@ -3,7 +3,7 @@
     justify-content: space-between;
     padding-top: 4rem;
     height: 14rem;
-    @include breakpoint-down(large) {
+    @include breakpoint-down(medium) {
         height: 8rem;
         align-items: center;
         padding: 0;
@@ -21,10 +21,10 @@
             margin: 0 auto;
         }
         p {
-            @include breakpoint-down(large) {
-                margin: 0 auto;
+            @include breakpoint-down(medium) {
                 margin-top: 0;
             }
+            margin-top: 3rem;
             span {
                 color: $vgeOrange;
                 font-weight: 600;

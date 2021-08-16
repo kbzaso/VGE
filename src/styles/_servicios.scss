@@ -46,16 +46,19 @@
         justify-content: space-evenly;
         text-align: center;
         h4 {
-            font-size: $font-lg;
+            font-size: 1.9rem;
             margin-top: 3rem;
         }
         p {}
         .card {
             margin-top: 1rem;
-            max-width: 35rem;
+            max-width: 30%;
             height: 43rem;
             p {
                 margin-top: 2rem;
+            }
+            img {
+                max-width: 100%;
             }
         }
     }

@@ -1,7 +1,7 @@
 .preferirnos {
     height: 80rem;
     text-align: center;
-    padding: 10rem 2.5rem;
+    padding: 10rem 0;
     h3 {
         color: $vgeWhite;
     }
@@ -13,12 +13,18 @@
             justify-content: space-evenly;
             text-align: center;
         }
+        h2 {
+            margin-top: 3rem;
+        }
         img {
             margin-top: 5rem;
         }
         p {
             color: $vgeWhite;
             padding: 0 2.5rem;
+        }
+        .preferirnos__tab {
+            width: 35rem;
         }
     }
     &__botonera {
