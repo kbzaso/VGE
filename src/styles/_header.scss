@@ -1,7 +1,9 @@
 .header {
     nav {
-        padding: 2.4rem;
         height: 8rem;
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
     }
     &__logo {
         margin-top: 1rem;
@@ -63,7 +65,7 @@
         a {
             font-size: $font-md;
             color: $vgeWhite;
-            font-weight: 200;
+            font-weight: 400;
             display: inline-block;
             position: relative;
             transition: color 200ms ease-in-out;

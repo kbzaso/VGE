@@ -1,0 +1,75 @@
+#contacto {
+    background-color: $vgeWhite;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contacto {
+    padding: 10rem 2.5rem;
+    display: flex;
+    &__info {
+        width: 45rem;
+        padding-right: 7rem;
+    }
+    h3 {
+        color: $vgeBlue;
+    }
+    p {
+        margin-top: 1.5rem;
+    }
+    &__form {
+        max-width: 54rem;
+        width: 54rem;
+        label,
+        legend {
+            font-size: 1.3rem;
+            color: gray;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        legend {
+            width: 100%;
+        }
+        textarea {
+            resize: none;
+        }
+        input,
+        textarea,
+        select,
+        button {
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        input[type='checkbox'] {
+            transform: scale(1.2);
+        }
+        #name,
+        #email,
+        #message,
+        #date {
+            border: none;
+            padding: 1rem;
+            background-color: $vgeBlue;
+            color: $vgeWhite;
+            font-size: $font-md;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .date {
+            width: 30rem;
+            margin-right: 3rem;
+        }
+        .elegirFecha {
+            display: flex;
+        }
+        .form__button {
+            background-color: $vgeOrange;
+            width: 100%;
+            border: none;
+            color: $vgeWhite;
+            height: 4rem;
+            margin-top: 1rem;
+            border-radius: 25px;
+        }
+    }
+}

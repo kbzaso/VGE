@@ -1,0 +1,28 @@
+.preferirnos {
+    height: 80rem;
+    text-align: center;
+    padding: 10rem 2.5rem;
+    h3 {
+        color: $vgeWhite;
+    }
+    &__cards {
+        display: block;
+        @include breakpoint-up(large) {
+            padding-top: 7rem;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+        img {
+            margin-top: 5rem;
+        }
+        p {
+            color: $vgeWhite;
+            padding: 0 2.5rem;
+        }
+    }
+    &__botonera {
+        color: $vgeWhite;
+        font-size: $font-xl;
+    }
+}

@@ -1,8 +1,9 @@
-const QuienesSomos = async() => {
+// import planos from '@images/planos.jpg';
+
+const QuienesSomos = () => {
     const view = `
-    <section class="quienes-somos">
-    <div class="quienes-somos__image">
-        <img src="" alt="Persona en un escritorio trabajando en planos de ingenieria" />
+    <section class="quienes-somos container">
+    <div class="quienes-somos__image ">
     </div>
     <div class="quienes-somos__text">
         <h2>Quiénes Somos</h2>

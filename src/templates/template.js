@@ -2,7 +2,7 @@ import logo from '@images/vge-logo.svg';
 
 const Template = () => {
     const view = `
-    <header class="header">
+    <header class="header container container--px">
         <div class="overlay">
             <div class="header__menu">
                 <div>
@@ -19,6 +19,7 @@ const Template = () => {
             <a href="/" class="header__logo">
                 <img src="${logo}" alt="Logo de VGE Ingeniería" />
             </a>
+            
             <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
                 <span></span>
                 <span></span>
@@ -31,9 +32,8 @@ const Template = () => {
             </div>
         </nav>
     </header>
-    <section class="hero">
-        <div class="hero__blend"></div>
-        <div class="hero__image"></div>
+
+    <section class="hero" role="img" aria-label="Image Description">
         <div class="hero__text">
             <h1>
                 <span class="underline"><span>Nuestra calidad es tu respaldo</span></span>
@@ -43,8 +43,6 @@ const Template = () => {
             </p>
         </div>
     </section>
-    
-
   `;
     return view;
 };

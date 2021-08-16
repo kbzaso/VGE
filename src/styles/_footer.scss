@@ -1,0 +1,46 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4rem;
+    height: 14rem;
+    @include breakpoint-down(large) {
+        height: 8rem;
+        align-items: center;
+        padding: 0;
+    }
+    &__logo {
+        img {
+            width: 14rem;
+        }
+    }
+    &__menu {
+        text-align: center;
+        color: $vgeWhite;
+        font-weight: 200;
+        @include breakpoint-down(large) {
+            margin: 0 auto;
+        }
+        p {
+            @include breakpoint-down(large) {
+                margin: 0 auto;
+                margin-top: 0;
+            }
+            span {
+                color: $vgeOrange;
+                font-weight: 600;
+            }
+            margin-top: 3rem;
+        }
+    }
+    &__rrss {
+        font-size: 2rem;
+        color: $vgeWhite;
+        a {
+            color: $vgeWhite;
+            &:hover {
+                color: $vgeCian;
+                transition: color 200ms ease-in-out;
+            }
+        }
+    }
+}

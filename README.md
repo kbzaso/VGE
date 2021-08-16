@@ -8,5 +8,6 @@
 
 ## Por hacer
 
-- Submenu Nuestros Servicios
-- Agregar transiciond entrada al menu mobile
+- Submenu Nuestros Servicios - mobile
+- bg patron
+- seccion contacto
