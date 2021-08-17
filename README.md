@@ -10,4 +10,6 @@
 
 - Submenu Nuestros Servicios - mobile
 - bg patron
-- seccion contacto
+- seccion preferirnos mobil
+- menu funcional
+- seccion servicios funcional

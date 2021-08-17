@@ -13,7 +13,7 @@ const Footer = () => {
             <a href="#" class="effect-underline">Nuestros Servicios</a>
             <a href="#" class="effect-underline">Contacto</a>
         </div>
-        <p><i class="far fa-copyright"></i> <span>VGE Ingenieria.</span> Todos los derechos reservados.</p>
+        <p><i class="far fa-copyright"></i> <span>VGE Ingeniería.</span> Todos los derechos reservados.</p>
     </div>
     <div class="footer__rrss hide-for-mobile">
         <a href="#"> <i class="fab fa-linkedin-in"></i></a>

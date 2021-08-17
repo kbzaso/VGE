@@ -6,7 +6,7 @@ import respaldo from '@images/preferirnos/respaldo.svg';
 const Preferirnos = () => {
     const view = `
     <div class="preferirnos container hide-for-mobile">
-        <h2>Porque Preferirnos</h2>
+        <h2>Por qué Preferirnos</h2>
         <h3>Uniendo tres ramas de la Ingeniería Civil, buscamos proyectar nuestra nueva propuesta como una opción segura y confiable.</h3>
         
         <div class="preferirnos__botonera hide-for-desktop">

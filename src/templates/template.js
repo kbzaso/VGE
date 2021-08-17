@@ -6,7 +6,7 @@ const Template = () => {
         <div class="overlay">
             <div class="header__menu">
                 <div>
-                    <a href="">Quienes Somos</a>
+                    <a href="">Quiénes Somos</a>
                     <span></span>
                     <a href="">Nuestros Servicios</a>
                     <span></span>
@@ -26,7 +26,7 @@ const Template = () => {
                 <span></span>
             </a>
             <div class="header__links hide-for-mobile">
-                <a href="#" class="effect-underline">Quíenes Somos</a>
+                <a href="#" class="effect-underline">Quiénes Somos</a>
                 <a href="#" class="effect-underline">Nuestros Servicios</a>
                 <a href="#" class="effect-underline">Contacto</a>
             </div>
