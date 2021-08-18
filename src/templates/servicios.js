@@ -1,7 +1,3 @@
-import transmisionElectrica from '@images/servicios/transmision-electrica.png';
-import estructural from '@images/servicios/estructural.png';
-import vial from '@images/servicios/vial.png';
-
 const Servicios = () => {
     const view = ` 
 <section class="servicios hide-for-desktop">
@@ -26,23 +22,42 @@ const Servicios = () => {
     </div>
     
     <div class="servicios-desktop__cards container">
+    <a href="">
         <div class="card">
-            <img src="${transmisionElectrica}" alt="Torres de alta tensión electrica">
-            <h4>Ingeniería de Transmisión Eléctrica</h4>
-            <p>Desarrollo y diseño de estructuras para líneas de transmisión y subestaciones eléctricas.</p>
+            
+                <div class="card__image electrica">
+                    <div class="card__content">
+                        <div class="card__button">Ver más</div>
+                    </div>
+                </div>
+                <h4>Ingeniería de Transmisión Eléctrica</h4>
+                <p>Desarrollo y diseño de estructuras para líneas de transmisión y subestaciones eléctricas.</p>
         </div>
+    </a>
 
+    <a href="">
         <div class="card">
-            <img src="${estructural}" alt="Torres de alta tensión electrica">
+            <div class="card__image estructural">
+                <div class="card__content">
+                        <div class="card__button">Ver más</div>
+                    </div>
+                </div>
             <h4>Ingeniería Estructural</h4>
             <p>Con sólida base en el área, VGE Ingeniería entrega servicios dedicados al cálculo estructural de proyectos del sector inmobiliario como también del ...</p>
         </div>
+    </a>
 
+    <a href="">
         <div class="card">
-            <img src="${vial}" alt="Torres de alta tensión electrica">
+            <div class="card__image vial">
+                <div class="card__content">
+                    <div class="card__button">Ver más</div>
+                </div>
+            </div>
             <h4>Ingeniería Vial</h4>
             <p>Desarrollo de estudios viales, abarcando íntegramente el proyecto a partir del diseño ...</p>
         </div>
+    </a>
     </div>
 </div>
 
