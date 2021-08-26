@@ -2,6 +2,9 @@
     height: 80rem;
     text-align: center;
     padding: 10rem 0;
+    background-image: url('./../images/patron-bg.svg');
+    background-size: cover;
+    background-position: center;
     h3 {
         color: $vgeWhite;
     }
@@ -18,6 +21,7 @@
         }
         img {
             margin-top: 5rem;
+            height: 10rem;
         }
         p {
             color: $vgeWhite;

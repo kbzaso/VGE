@@ -2,6 +2,7 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -17,6 +18,7 @@ body {
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
     background-color: $vgeBlue;
+    height: auto;
 }
 
 a,

@@ -1,4 +1,5 @@
-import Template from '@templates/template.js';
+import Nav from '@templates/nav.js';
+import Header from '@templates/header.js';
 import QuienesSomos from '@templates/quienes-somos.js';
 import Servicios from '@templates/servicios.js';
 import Preferirnos from '@templates/preferirnos.js';
@@ -8,13 +9,15 @@ import '@styles/main.scss';
 // import logo from '@images/vge-logo.svg';
 
 (function App() {
-    const main = null || document.getElementById('main');
+    const nav = null || document.getElementById('nav');
+    const header = null || document.getElementById('header');
     const qs = null || document.getElementById('quienes-somos');
     const servicios = null || document.getElementById('servicios');
     const preferirnos = null || document.getElementById('preferirnos');
     const contacto = null || document.getElementById('contacto');
     const footer = null || document.getElementById('footer');
-    main.innerHTML = Template();
+    nav.innerHTML = Nav();
+    header.innerHTML = Header();
     qs.innerHTML = QuienesSomos();
     servicios.innerHTML = Servicios();
     preferirnos.innerHTML = Preferirnos();
