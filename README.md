@@ -8,7 +8,14 @@
 
 ## Por hacer
 
-- Submenu Nuestros Servicios - mobile
-- seccion preferirnos mobil
+- submenu Nuestros Servicios - mobile
 - menu funcional
+- scroll del menu mobil
 - seccion servicios funcional
+- formulario funcional
+- menu quienes somos mejorar posicionamiento del div
+- favicon
+- logo link directo al hero
+- imagenes responsive
+- imagenes optimizadas
+- imagen quienes somos se repite

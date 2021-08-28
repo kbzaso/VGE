@@ -29,7 +29,7 @@ const Nav = () => {
                         <span></span>
                         <a href="">Contacto</a>
                     </div>
-                    <p>© VGE Ingenieria. Todos los derechos reservados.</p>
+                    <p>© VGE Ingeniería. Todos los derechos reservados.</p>
                 </div>
             </div>
           </div>

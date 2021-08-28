@@ -1,8 +1,11 @@
+import planos from '@images/planos2.png';
+
 const QuienesSomos = () => {
     const view = `
 
         <section class="quienes-somos container">
             <div id="quienes-somos__image" class="quienes-somos__image ">
+                <img src="${planos}" alt="Persona trabajando con planos en un escritorio">
             </div>
             <div class="quienes-somos__text">
                 <h2>Quiénes Somos</h2>
