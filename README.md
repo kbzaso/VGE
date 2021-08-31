@@ -16,6 +16,4 @@
 - menu quienes somos mejorar posicionamiento del div
 - favicon
 - logo link directo al hero
-- imagenes responsive
 - imagenes optimizadas
-- imagen quienes somos se repite

@@ -10,7 +10,7 @@ const Preferirnos = () => {
     <div class="preferirnos">
     
         <div class="preferirnos__botonera hide-for-desktop">
-            <button type='button' class='preferirnos__botonera--left'><i class="fas fa-chevron-left"></i></button>
+            <button type='button' class='is-hidden preferirnos__botonera--left'><i class="fas fa-chevron-left"></i></button>
             <button type='button' class='preferirnos__botonera--right'><i class="fas fa-chevron-right"></i></button>
         </div>
 

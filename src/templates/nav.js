@@ -4,7 +4,7 @@ const Nav = () => {
     const view = `
           <div class="header container container--px">
             <nav class="flex flex-jc-sb flex-ai-c">
-              <a href="/" class="header__logo">
+              <a href="#header" class="header__logo">
                   <img src="${logo}" alt="Logo de VGE Ingeniería" />
               </a>
               
@@ -14,7 +14,7 @@ const Nav = () => {
                   <span></span>
               </a>
               <div class="header__links hide-for-mobile">
-                  <a href="#quienes-somos__image" class="effect-underline">Quiénes Somos</a>
+                  <a href="#qs" class="effect-underline">Quiénes Somos</a>
                   <a href="#servicios" class="effect-underline">Nuestros Servicios</a>
                   <a href="#contacto" class="effect-underline">Contacto</a>
               </div>

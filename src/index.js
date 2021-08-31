@@ -76,7 +76,19 @@ const updateDots = (currentDot, targetDot) => {
     targetDot.classList.add('current-indicator');
 };
 
-// console.log(slides);
+// HIDE ARROWS
+const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
+    if (targetIndex === 0) {
+        prevButton.classList.add('is-hidden');
+        nextButton.classList.remove('is-hidden');
+    } else if (targetIndex === slides.length - 1) {
+        prevButton.classList.remove('is-hidden');
+        nextButton.classList.add('is-hidden');
+    } else {
+        prevButton.classList.remove('is-hidden');
+        nextButton.classList.remove('is-hidden');
+    }
+};
 
 // // CUANDO HAYA UN CLICK SE MUEVA AL SLIDE DE LA DERECHA
 nextButton.addEventListener('click', (e) => {
@@ -84,10 +96,13 @@ nextButton.addEventListener('click', (e) => {
     const nextSlide = currentSlide.nextElementSibling;
     const currentDot = dotNav.querySelector('.current-indicator');
     const nextDot = currentDot.nextElementSibling;
+    const nextIndex = slides.findIndex((slide) => slide === nextSlide);
 
     // MOVER HACIA EL SIGUIENTE SLIDE
     moveToSlide(track, currentSlide, nextSlide);
     updateDots(currentDot, nextDot);
+
+    hideShowArrows(slides, prevButton, nextButton, nextIndex);
 });
 
 prevButton.addEventListener('click', (e) => {
@@ -95,10 +110,12 @@ prevButton.addEventListener('click', (e) => {
     const prevSlide = currentSlide.previousElementSibling;
     const currentDot = dotNav.querySelector('.current-indicator');
     const prevDot = currentDot.previousElementSibling;
+    const prevIndex = slides.findIndex((slide) => slide === prevSlide);
 
     // MOVER HACIA EL SIGUIENTE SLIDE
     moveToSlide(track, currentSlide, prevSlide);
     updateDots(currentDot, prevDot);
+    hideShowArrows(slides, prevButton, nextButton, prevIndex);
 });
 
 // CUANDO HAGO CLICL EN LOS INDICADORES, SE MOVERA AL SLIDE
@@ -116,4 +133,5 @@ dotNav.addEventListener('click', (e) => {
     moveToSlide(track, currentSlide, targetSlide);
     updateDots(currentDot, targetDot);
     // console.log(targetIndex);
+    hideShowArrows(slides, prevButton, nextButton, targetIndex);
 });
