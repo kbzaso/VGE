@@ -15,5 +15,4 @@
 - formulario funcional
 - menu quienes somos mejorar posicionamiento del div
 - favicon
-- logo link directo al hero
 - imagenes optimizadas
