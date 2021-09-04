@@ -6,6 +6,7 @@ import Preferirnos from '@templates/preferirnos.js';
 import Contacto from '@templates/contacto.js';
 import Footer from '@templates/footer.js';
 import '@styles/main.scss';
+// import '@utils/menu-mobile.js';
 // import logo from '@images/vge-logo.svg';
 
 (function App() {
@@ -134,4 +135,46 @@ dotNav.addEventListener('click', (e) => {
     updateDots(currentDot, targetDot);
     // console.log(targetIndex);
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
+});
+
+// MODAL
+const serviciosContainer = document.getElementById('servicios');
+// console.log(serviciosContainer);
+serviciosContainer.addEventListener('click', (e) => {
+    // console.log(e);
+    e.preventDefault();
+    const modalToggle = e.target.closest('.servicios__menu-link');
+    // console.log(modalToggle);
+
+    if (!modalToggle) return;
+    const modal = modalToggle.nextElementSibling;
+    const closeButton = modal.querySelector('.modal-close');
+
+    const modalOpen = (_) => {
+        modal.classList.add('is-open');
+        modal.style.animation = 'modalIn 300ms forwards';
+        document.body.style.overflowY = 'hidden';
+    };
+
+    modalOpen();
+
+    const modalClose = (_) => {
+        modal.classList.remove('is-open');
+        modal.removeEventListener('animationend', modalClose);
+        document.body.style.overflowY = 'scroll';
+    };
+
+    closeButton.addEventListener('click', (_) => {
+        // modal.classList.remove('is-open');
+        modal.style.animation = 'modalOut 300ms forwards';
+        modal.addEventListener('animationend', modalClose);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.keyCode === 27) {
+            modal.style.animation = 'modalOut 300ms forwards';
+            modal.addEventListener('animationend', modalClose);
+            document.body.style.overflowY = 'scroll';
+        }
+    });
 });
