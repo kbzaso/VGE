@@ -2,14 +2,14 @@
 
 import logo from '@images/vge-logo.svg';
 const Footer = () => {
-    const view = `
+  const view = `
 <div class="footer container container--px">
     <a href="/" class='footer__logo hide-for-mobile'>
         <img src="${logo}" alt="Logotipo VGE Ingenieria">
     </a>
     <div class="footer__menu">
         <div class="header__links hide-for-mobile">
-            <a href="#" class="effect-underline">Quíenes Somos</a>
+            <a href="#" class="effect-underline">Quiénes Somos</a>
             <a href="#" class="effect-underline">Nuestros Servicios</a>
             <a href="#" class="effect-underline">Contacto</a>
         </div>
@@ -20,7 +20,7 @@ const Footer = () => {
     </div>
 </div>
   `;
-    return view;
+  return view;
 };
 
 export default Footer;

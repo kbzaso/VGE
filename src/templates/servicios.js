@@ -1,6 +1,6 @@
 import electrica from '@images/servicios/transmision-electrica.jpg';
 const Servicios = () => {
-    const view = `
+  const view = `
     <section class="servicios hide-for-desktop">
       <div class="servicios__text">
         <h2>Nuestros Servicios</h2>
@@ -27,33 +27,22 @@ const Servicios = () => {
               />
             </div>
             <figcaption>
-              <div class="modal__title"><h3>Titulo ELECTRICA</h3></div>
+              <div class="modal__title"><h3>Ingeniería de Transmisión Eléctrica.</h3></div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam a
-                cupiditate aperiam corrupti cumque corporis, molestiae nostrum
-                dicta magnam eaque iusto doloremque ipsa, odio alias nulla
-                blanditiis, inventore consequatur perspiciatis. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Quam a cupiditate
-                aperiam corrupti cumque corporis, molestiae nostrum dicta magnam
-                eaque iusto doloremque ipsa, odio alias nulla blanditiis,
-                inventore consequatur perspiciatis.
+                LDesarrollo y diseño de estructuras para líneas de transmisión y subestaciones eléctricas.
               </p>
               <div class="modal__list">
                 <li>
-                  Diseño de estructuras de transmisión basado en ASCE 10-15
+                Diseño de estructuras de transmisión basado en ASCE 10-15
                 </li>
                 <li>
-                  Diseño de estructuras de transmisión basado en ASCE 10-15
+                Diseño de estructuras y fundaciones de soporte de equipos de subestaciones eléctricas.
                 </li>
                 <li>
-                  Diseño de estructuras de transmisión basado en ASCE 10-15
+                Diseño de monopostes para transmisión y soporte antenas.
                 </li>
               </div>
             </figcaption>
-            <div class="modal__botonera">
-              <button type="button">Ingeniería Estructural</button>
-              <button type="button">Ingeniería Vial</button>
-            </div>
           </figure>
         </div>
         <!-- ================= / MODAL ELECTRICA ===================== -->
@@ -63,7 +52,7 @@ const Servicios = () => {
         >
 
         <!-- ================= MODAL ESTRUCTURAL ===================== -->
-        <div class="modal modal__electrica">
+        <div class="modal modal__estructural">
           <button class="modal-close">
             <i class="fas fa-times"></i>
           </button>
@@ -75,33 +64,11 @@ const Servicios = () => {
               />
             </div>
             <figcaption>
-              <div class="modal__title"><h3>ESTRUCTURAL</h3></div>
+              <div class="modal__title"><h3>Ingeniería Estructural.</h3></div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam a
-                cupiditate aperiam corrupti cumque corporis, molestiae nostrum
-                dicta magnam eaque iusto doloremque ipsa, odio alias nulla
-                blanditiis, inventore consequatur perspiciatis. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Quam a cupiditate
-                aperiam corrupti cumque corporis, molestiae nostrum dicta magnam
-                eaque iusto doloremque ipsa, odio alias nulla blanditiis,
-                inventore consequatur perspiciatis.
+              Con sólida base en el área, VGE Ingeniería entrega servicios dedicados al cálculo estructural de proyectos del sector inmobiliario como también del industrial, aportando con soluciones en acero y hormigón armado, así como en la verificación estructural de los elementos que componen un sistema resistente.
               </p>
-              <div class="modal__list">
-                <li>
-                  Diseño de estructuras de transmisión basado en ASCE 10-15
-                </li>
-                <li>
-                  Diseño de estructuras de transmisión basado en ASCE 10-15
-                </li>
-                <li>
-                  Diseño de estructuras de transmisión basado en ASCE 10-15
-                </li>
-              </div>
             </figcaption>
-            <div class="modal__botonera">
-              <button type="button">Ingeniería Estructural</button>
-              <button type="button">Ingeniería Vial</button>
-            </div>
           </figure>
         </div>
         <!-- =============== / MODAL ESTRUCTURA ===================  -->
@@ -122,31 +89,29 @@ const Servicios = () => {
             <figcaption>
               <div class="modal__title"><h3>Ingeniería Vial</h3></div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam a
-                cupiditate aperiam corrupti cumque corporis, molestiae nostrum
-                dicta magnam eaque iusto doloremque ipsa, odio alias nulla
-                blanditiis, inventore consequatur perspiciatis. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Quam a cupiditate
-                aperiam corrupti cumque corporis, molestiae nostrum dicta magnam
-                eaque iusto doloremque ipsa, odio alias nulla blanditiis,
-                inventore consequatur perspiciatis.
+              Desarrollo de estudios viales, abarcando íntegramente el proyecto a partir del diseño conceptual y considerando en sus distintas etapas, la implementación de las especialidades que aseguran un correcto y eficiente proyecto vial. 
               </p>
               <div class="modal__list">
                 <li>
-                  Diseño de estructuras de transmisión basado en ASCE 10-15
+                Levantamiento de Monografías.
                 </li>
                 <li>
-                  Diseño de estructuras de transmisión basado en ASCE 10-15
+                Conteos de tránsito.
                 </li>
                 <li>
-                  Diseño de estructuras de transmisión basado en ASCE 10-15
+                Diseño Geométrico
+                </li>
+                <li>
+                Seguridad Vial y gestión de tráfico.
+                </li>
+                <li>
+                Diseño de Pavimentos.
+                </li>
+                <li>
+                Saneamiento y drenaje de la plataforma.
                 </li>
               </div>
             </figcaption>
-            <div class="modal__botonera">
-              <button type="button">Ingeniería Estructural</button>
-              <button type="button">Ingeniería Vial</button>
-            </div>
           </figure>
         </div>
         <!-- ================= / MODAL ELECTRICA ===================== -->
@@ -211,6 +176,6 @@ const Servicios = () => {
       </div>
     </div>
   `;
-    return view;
+  return view;
 };
 export default Servicios;

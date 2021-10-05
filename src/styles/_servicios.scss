@@ -1,222 +1,231 @@
 .servicios {
-    background-color: $vgeWhite;
-    padding: 6rem 2.4rem;
-    &__text {
-        text-align: center;
-        color: $vgeBlue;
-        h3 {
-            font-size: $font-lg;
-        }
+  background-color: $vgeWhite;
+  padding: 6rem 2.4rem;
+  &__text {
+    text-align: center;
+    color: $vgeBlue;
+    h3 {
+      font-size: $font-lg;
     }
-    &__menu {
-        margin-top: 6rem;
-        span {
-            display: flex;
-            flex-direction: column;
-            background-color: $vgeBlue;
-            border-radius: 2.5rem;
-            padding: 1rem 2rem;
-            margin-bottom: 2rem;
-        }
-        a {
-            text-align: center;
-            color: $vgeWhite;
-            font-size: $font-md;
-        }
+  }
+  &__menu {
+    margin-top: 6rem;
+    span {
+      display: flex;
+      flex-direction: column;
+      background-color: $vgeBlue;
+      border-radius: 2.5rem;
+      padding: 1rem 2rem;
+      margin-bottom: 2rem;
     }
+    a {
+      text-align: center;
+      color: $vgeWhite;
+      font-size: $font-md;
+    }
+  }
 }
 
 // desktop
 .servicios-desktop {
-    background-color: $vgeWhite;
-    width: 100%;
-    // height: 80rem;
-    padding: 10rem 0;
-    &__text {
-        text-align: center;
-        max-width: 94rem;
-        margin: 0 auto;
-        h3 {
-            font-size: $font-xl;
-        }
+  background-color: $vgeWhite;
+  width: 100%;
+  // height: 80rem;
+  padding: 10rem 0;
+  &__text {
+    text-align: center;
+    max-width: 94rem;
+    margin: 0 auto;
+    h3 {
+      font-size: $font-xl;
     }
-    &__cards {
-        padding-top: 7rem;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        h4 {
-            font-size: 1.9rem;
-            margin-top: 3rem;
-        }
-        a {
-            max-width: 30%;
-        }
-        .card {
-            margin-top: 1rem;
-            height: 43rem;
-            transition: transform 200ms ease-in-out;
-            transform: scale(1);
-            &:hover {
-                transition: transform 200ms ease-in-out;
-                transform: scale(1.03);
-                .card__content {
-                    opacity: 1;
-                    background: linear-gradient( to bottom, rgba(42, 54, 77, 0) 0%, rgba(42, 54, 77, 0.5) 65%, $vgeBlue 100%), no-repeat center center scroll;
-                    transition: all 200ms ease-in-out;
-                }
-                .card__button {
-                    transform: translateY(0);
-                    transition: all 200ms ease-in-out;
-                    opacity: 1;
-                }
-            }
-            &__image {
-                width: 35rem;
-                height: 26rem;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                border-radius: 2.5rem;
-                overflow: hidden;
-                -webkit-mask-image: -webkit-radial-gradient(white, black);
-                .card__content {
-                    width: 100%;
-                    height: 100%;
-                    opacity: 0;
-                    transition: all 200ms ease-in-out;
-                }
-                .card__button {
-                    display: inline-block;
-                    position: relative;
-                    opacity: 0;
-                    top: 19rem;
-                    text-decoration: none;
-                    background-color: $vgeOrange;
-                    color: $vgeWhite;
-                    font-size: $font-md;
-                    border-radius: 2.5rem;
-                    padding: 0.8rem 5rem;
-                    text-transform: uppercase;
-                    transform: translateY(8rem);
-                    transition: all 300ms ease-in-out;
-                }
-            }
-            .electrica {
-                background-image: url('../images/servicios/transmision-electrica.jpg');
-            }
-            .estructural {
-                background-image: url('../images/servicios/estructural.png');
-            }
-            .vial {
-                background-image: url('../images/servicios/vial.png');
-            }
-            p {
-                margin-top: 2rem;
-            }
-            img {
-                max-width: 100%;
-            }
-        }
+  }
+  &__cards {
+    padding-top: 7rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    h4 {
+      font-size: 1.9rem;
+      margin-top: 3rem;
     }
+    a {
+      max-width: 30%;
+    }
+    .card {
+      margin-top: 1rem;
+      height: 43rem;
+      transition: transform 200ms ease-in-out;
+      transform: scale(1);
+      &:hover {
+        transition: transform 200ms ease-in-out;
+        transform: scale(1.03);
+        .card__content {
+          opacity: 1;
+          background: linear-gradient(
+              to bottom,
+              rgba(42, 54, 77, 0) 0%,
+              rgba(42, 54, 77, 0.5) 65%,
+              $vgeBlue 100%
+            ),
+            no-repeat center center scroll;
+          transition: all 200ms ease-in-out;
+        }
+        .card__button {
+          transform: translateY(0);
+          transition: all 200ms ease-in-out;
+          opacity: 1;
+        }
+      }
+      &__image {
+        width: 35rem;
+        height: 26rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 2.5rem;
+        overflow: hidden;
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
+        .card__content {
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: all 200ms ease-in-out;
+        }
+        .card__button {
+          display: inline-block;
+          position: relative;
+          opacity: 0;
+          top: 19rem;
+          text-decoration: none;
+          background-color: $vgeOrange;
+          color: $vgeWhite;
+          font-size: $font-md;
+          border-radius: 2.5rem;
+          padding: 0.8rem 5rem;
+          text-transform: uppercase;
+          transform: translateY(8rem);
+          transition: all 300ms ease-in-out;
+        }
+      }
+      .electrica {
+        background-image: url('../images/servicios/transmision-electrica.jpg');
+      }
+      .estructural {
+        background-image: url('../images/servicios/estructural.png');
+      }
+      .vial {
+        background-image: url('../images/servicios/vial.png');
+      }
+      p {
+        margin-top: 2rem;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
 }
 
 .modal {
-    position: fixed;
+  position: fixed;
+  display: block;
+  z-index: 90;
+  padding: 1rem 3rem;
+  top: 4rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $vgeWhite;
+  // box-shadow: 0 0 0 5em rgba($color: #000000, $alpha: 0.5);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  // BORRAR
+  display: none;
+  &.is-open {
     display: block;
-    z-index: 90;
-    padding: 1rem 3rem;
+  }
+  figcaption {
+    margin-bottom: 2rem;
+  }
+  &__img {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    img {
+      max-height: 40rem;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 25px;
+    }
+  }
+  h3 {
+    font-size: $font-lg;
+    color: $vgeOrange;
+    text-transform: uppercase;
+  }
+  p {
+    margin-top: 2rem;
+  }
+  &__list {
+    display: block;
+    padding: 4rem 0 0 2rem;
+  }
+  li {
+    margin-top: 1rem;
+  }
+  .modal-close {
+    background: $vgeOrange;
+    height: 6rem;
+    width: 6rem;
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    font-size: $font-xl;
+    position: sticky;
+    // right: 4rem;
+    float: right;
     top: 4rem;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: $vgeWhite;
-    // box-shadow: 0 0 0 5em rgba($color: #000000, $alpha: 0.5);
-    overflow-y: scroll;
-    overflow-x: hidden;
-    width: 100%;
-    // BORRAR
-    display: none;
-    &.is-open {
-        display: block;
-    }
-    &__img {
-        margin-top: 6rem;
-        margin-bottom: 3rem;
-        img {
-            max-height: 40rem;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 25px;
-        }
-    }
-    h3 {
-        font-size: $font-lg;
-        color: $vgeOrange;
-        text-transform: uppercase;
-    }
-    p {
+    color: $vgeWhite;
+    cursor: pointer;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.6);
+  }
+  &__botonera {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0 3rem;
+    button {
+      background-color: $vgeBlue;
+      color: $vgeWhite;
+      border: none;
+      padding: 1.2rem;
+      border-radius: 25px;
+      cursor: pointer;
+      &:nth-last-child(1) {
         margin-top: 2rem;
+      }
+      &:hover {
+        background-color: $vgeOrange;
+      }
     }
-    &__list {
-        display: block;
-        padding: 4rem 0 0 2rem;
-    }
-    li {
-        margin-top: 1rem;
-    }
-    .modal-close {
-        background: $vgeOrange;
-        height: 6rem;
-        width: 6rem;
-        padding: 1rem;
-        border-radius: 50%;
-        border: none;
-        font-size: $font-xl;
-        position: sticky;
-        // right: 4rem;
-        float: right;
-        top: 4rem;
-        color: $vgeWhite;
-        cursor: pointer;
-        box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.6);
-    }
-    &__botonera {
-        display: flex;
-        flex-direction: column;
-        margin: 4rem 0 3rem;
-        button {
-            background-color: $vgeBlue;
-            color: $vgeWhite;
-            border: none;
-            padding: 1.2rem;
-            border-radius: 25px;
-            cursor: pointer;
-            &:nth-last-child(1) {
-                margin-top: 2rem;
-            }
-            &:hover {
-                background-color: $vgeOrange;
-            }
-        }
-    }
+  }
 }
 
 @keyframes modalIn {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes modalOut {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(100%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }

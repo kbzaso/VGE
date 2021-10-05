@@ -13,6 +13,7 @@
 - scroll del menu mobil
 - seccion servicios funcional
 - formulario funcional
-- menu quienes somos mejorar posicionamiento del div
+- Decripcion en el header
 - favicon
 - imagenes optimizadas
+- Agregar contenido definito a card mobile
