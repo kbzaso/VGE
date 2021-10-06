@@ -1,120 +1,125 @@
 .preferirnos {
-    overflow: hidden;
-    height: 80rem;
-    text-align: center;
-    // padding: 10rem 0;
-    background-image: url('./../images/patron-bg.svg');
-    background-size: cover;
-    background-position: center;
+  overflow: hidden;
+  height: 80rem;
+  text-align: center;
+  background-image: url('./../images/patron-bg.svg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  &__content {
+    position: relative;
+    padding: 10rem 0;
+    @include breakpoint-down(medium) {
+      // padding: 6rem 0;
+    }
+  }
+  h3 {
+    color: $vgeWhite;
+  }
+  &__cards {
     display: flex;
-    justify-content: center;
-    &__content {
-        position: relative;
-        padding: 10rem 0;
-        @include breakpoint-down(medium) {
-            // padding: 6rem 0;
-        }
+    position: relative;
+    height: 100%;
+    transition: transform 300ms ease-in-out;
+    @include breakpoint-up(large) {
+      padding-top: 7rem;
+      justify-content: space-evenly;
+      text-align: center;
     }
-    h3 {
-        color: $vgeWhite;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      align-items: center;
     }
-    &__cards {
-        display: flex;
-        position: relative;
-        height: 100%;
-        transition: transform 300ms ease-in-out;
-        @include breakpoint-up(large) {
-            padding-top: 7rem;
-            justify-content: space-evenly;
-            text-align: center;
-        }
-        @include breakpoint-down(medium) {
-            flex-direction: column;
-            align-items: center;
-        }
-        h2 {
-            margin-top: 3rem;
-        }
-        img {
-            margin-top: 5rem;
-            height: 10rem;
-            @include breakpoint-down(medium) {
-                margin-top: 0;
-            }
-        }
-        p {
-            color: $vgeWhite;
-            padding: 0 2.5rem;
-        }
-        .preferirnos__tab {
-            width: 35rem;
-            @include breakpoint-down(medium) {
-                width: 100%;
-                height: auto;
-                position: absolute;
-                top: 40%;
-                left: 50%;
-                transform: translateX(-50%);
-                transform: translateY(-50%);
-                padding-bottom: 5rem;
-                background-color: $vgeBlue;
-                border-radius: 10%;
-                display: flex;
-                flex-direction: column;
-                // border: 1px solid $vgeGray;
-                p {
-                    width: 90%;
-                    align-self: center;
-                }
-            }
-        }
+    h2 {
+      margin-top: 3rem;
     }
-    &__botonera {
-        color: $vgeWhite;
-        font-size: $font-xl;
-        position: absolute;
-        z-index: 10;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    img {
+      margin-top: 5rem;
+      height: 10rem;
+      @include breakpoint-down(medium) {
+        margin-top: 0;
+      }
+    }
+    p {
+      color: $vgeWhite;
+      padding: 0 2.5rem;
+    }
+    .preferirnos__tab {
+      width: 35rem;
+      @include breakpoint-down(medium) {
         width: 100%;
-        height: 80rem;
-        button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: $font-xl;
-            cursor: pointer;
-            height: 100%;
-            width: 6rem;
-        }
-    }
-    &__nav {
-        display: flex;
+        height: auto;
         position: absolute;
-        bottom: 3rem;
-        left: calc(50%);
-        z-index: 60;
+        top: 40%;
+        left: 50%;
         transform: translateX(-50%);
-        .preferirnos__indicator {
-            border: 0;
-            border-radius: 50%;
-            width: 1.5rem;
-            height: 1.5rem;
-            background-color: rgba($color: $vgeOrange, $alpha: 0.5);
-            transition: background-color 300ms ease-in-out;
-            cursor: pointer;
-            &:not(nth-last-child) {
-                margin: 0 1rem;
-            }
-            &.current-indicator {
-                background-color: rgba($color: $vgeGray, $alpha: 0.7);
-                transition: background-color 300ms ease-in-out;
-            }
+        transform: translateY(-50%);
+        padding-bottom: 5rem;
+        background-color: $vgeBlue;
+        border-radius: 10%;
+        display: flex;
+        flex-direction: column;
+        // border: 1px solid $vgeGray;
+        p {
+          width: 90%;
+          align-self: center;
         }
+      }
     }
+  }
+  &__botonera {
+    color: $vgeWhite;
+    font-size: $font-xl;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80rem;
+    button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: $font-xl;
+      cursor: pointer;
+      height: 100%;
+      width: 6rem;
+      outline: none;
+      &:active {
+        background-color: transparent;
+        border: none !important;
+        outline: none !important;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    position: absolute;
+    bottom: 3rem;
+    left: calc(50%);
+    z-index: 60;
+    transform: translateX(-50%);
+    .preferirnos__indicator {
+      border: 0;
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: rgba($color: $vgeOrange, $alpha: 0.5);
+      transition: background-color 300ms ease-in-out;
+      cursor: pointer;
+      &:not(nth-last-child) {
+        margin: 0 1rem;
+      }
+      &.current-indicator {
+        background-color: rgba($color: $vgeGray, $alpha: 0.7);
+        transition: background-color 300ms ease-in-out;
+      }
+    }
+  }
 }
 
 .is-hidden {
-    opacity: 0;
+  opacity: 0;
 }

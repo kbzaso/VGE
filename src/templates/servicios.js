@@ -20,26 +20,29 @@ const Servicios = () => {
             <i class="fas fa-times"></i>
           </button>
           <figure class="modal__electrica">
-            <div class="modal__img">
+
+            <div class="modal__img modal__electrica">
               <img
                 src="${electrica}"
                 alt="Cables de electricidad de alta tensión"
               />
             </div>
+
+
             <figcaption>
               <div class="modal__title"><h3>Ingeniería de Transmisión Eléctrica.</h3></div>
               <p>
-                LDesarrollo y diseño de estructuras para líneas de transmisión y subestaciones eléctricas.
+                Desarrollo y diseño de estructuras para líneas de transmisión y subestaciones eléctricas.
               </p>
               <div class="modal__list">
                 <li>
-                Diseño de estructuras de transmisión basado en ASCE 10-15
+                 Diseño de estructuras de transmisión basado en ASCE 10-15
                 </li>
                 <li>
-                Diseño de estructuras y fundaciones de soporte de equipos de subestaciones eléctricas.
+                 Diseño de estructuras y fundaciones de soporte de equipos de subestaciones eléctricas.
                 </li>
                 <li>
-                Diseño de monopostes para transmisión y soporte antenas.
+                  Diseño de monopostes para transmisión y soporte antenas.
                 </li>
               </div>
             </figcaption>

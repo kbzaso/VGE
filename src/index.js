@@ -45,6 +45,46 @@ btnHamburger.addEventListener('click', function (e) {
   }
 });
 
+const qsBoton = document.getElementById('qs-btn');
+qsBoton.addEventListener('click', function (e) {
+  if (header.classList.contains('open')) {
+    header.classList.remove('open');
+    overlay.classList.remove('slide-in');
+    overlay.classList.add('slide-out');
+  } else {
+    header.classList.add('open');
+    overlay.classList.add('slide-in');
+    overlay.classList.remove('slide-out');
+  }
+});
+
+const contactoBoton = document.getElementById('contacto-btn');
+contactoBoton.addEventListener('click', function (e) {
+  if (header.classList.contains('open')) {
+    header.classList.remove('open');
+    overlay.classList.remove('slide-in');
+    overlay.classList.add('slide-out');
+  } else {
+    header.classList.add('open');
+    overlay.classList.add('slide-in');
+    overlay.classList.remove('slide-out');
+  }
+});
+
+const servicioBoton = document.getElementById('servicios-btn');
+servicioBoton.addEventListener('click', function (e) {
+  console.log('Works!');
+  if (header.classList.contains('open')) {
+    header.classList.remove('open');
+    overlay.classList.remove('slide-in');
+    overlay.classList.add('slide-out');
+  } else {
+    header.classList.add('open');
+    overlay.classList.add('slide-in');
+    overlay.classList.remove('slide-out');
+  }
+});
+
 // PREFERIRNOS SLIDER
 const track = document.querySelector('.preferirnos__cards');
 const slides = Array.from(track.children);

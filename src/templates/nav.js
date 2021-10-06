@@ -1,7 +1,7 @@
 import logo from '@images/vge-logo.svg';
 
 const Nav = () => {
-    const view = `
+  const view = `
           <div class="header container container--px">
             <nav class="flex flex-jc-sb flex-ai-c">
               <a href="#header" class="header__logo">
@@ -23,18 +23,18 @@ const Nav = () => {
             <div class="overlay">
                 <div class="header__menu">
                     <div>
-                        <a href="#quienes-somos">Quiénes Somos</a>
+                        <a id='qs-btn' href="#qs">Quiénes Somos</a>
                         <span></span>
-                        <a href="">Nuestros Servicios</a>
+                        <a id='servicios-btn' href="#servicios">Nuestros Servicios</a>
                         <span></span>
-                        <a href="">Contacto</a>
+                        <a id='contacto-btn' href="#contacto">Contacto</a>
                     </div>
                     <p>© VGE Ingeniería. Todos los derechos reservados.</p>
                 </div>
             </div>
           </div>
   `;
-    return view;
+  return view;
 };
 
 export default Nav;
