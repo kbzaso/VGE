@@ -1,4 +1,6 @@
-import electrica from '@images/servicios/transmision-electrica.jpg';
+import electrica from '@images/servicios/electrica/01.jpg';
+import electricados from '@images/servicios/electrica/02.jpg';
+import electricatres from '@images/servicios/electrica/03.jpg';
 const Servicios = () => {
   const view = `
     <section class="servicios hide-for-desktop">
@@ -8,6 +10,8 @@ const Servicios = () => {
           Uniendo tres ramas de la Ingeniería Civil, buscamos proyectar ...
         </h3>
       </div>
+      
+      
 
       <!-- ======================== BOTONERA MOBILE =====================-->
       <div class="servicios__menu">
@@ -19,14 +23,36 @@ const Servicios = () => {
           <button class="modal-close">
             <i class="fas fa-times"></i>
           </button>
+
           <figure class="modal__electrica">
 
-            <div class="modal__img modal__electrica">
-              <img
-                src="${electrica}"
-                alt="Cables de electricidad de alta tensión"
-              />
+
+
+          // SLIDER IMAGE ELECTRICA
+          <div class="carousel">
+            <div class="carousel__button carousel__button--left">
+              <i class="che fas fa-chevron-left"></i>
             </div>
+            <div class="carousel__track-container">
+              <ul class="carousel__track">
+                <li class="carousel__slide current-slide">
+                  <img class='carousel__image' src="${electrica}" alt="Cables de alta tensión">
+                </li>
+                <li class="carousel__slide">
+                  <img class='carousel__image' src="${electricados}" alt="Cables de alta tensión">
+                </li>
+                <li class="carousel__slide">
+                  <img class='carousel__image' src="${electricatres}" alt="Cables de alta tensión">
+                </li>
+                
+              </ul>
+            </div>
+            <div class="carousel__button carousel__button--right">
+            <i class="che fas fa-chevron-right"></i>
+            </div>
+          </div>
+
+
 
 
             <figcaption>

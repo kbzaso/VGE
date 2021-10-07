@@ -16,3 +16,4 @@
 - slider de imagenes en modal (mobile)
 - modal de servicios en (desktop)
 - observer nav menu
+- menu aparece al cargar la web

@@ -132,7 +132,7 @@
 
 .modal {
   position: fixed;
-  display: block;
+  // display: block;
   z-index: 90;
   padding: 1rem 3rem;
   top: 4rem;
@@ -145,12 +145,15 @@
   overflow-x: hidden;
   width: 100%;
   // BORRAR
-  display: none;
+  // display: none;
+  transform: translatex(100%);
   &.is-open {
     display: block;
+    transform: translatex(-100%);
   }
   figcaption {
     margin-bottom: 2rem;
+    margin-top: 5rem;
   }
   &__img {
     margin-top: 6rem;
@@ -173,7 +176,7 @@
   }
   &__list {
     display: block;
-    padding: 2rem 0 0 2rem;
+    padding: 2rem 0 0 0;
     list-style: none;
     ::marker {
       font-family: 'Font Awesome 5 Pro';
@@ -183,7 +186,7 @@
     }
     li {
       margin-top: 1rem;
-      padding-left: 1rem;
+      // padding-left: 1rem;
     }
   }
 
@@ -227,33 +230,75 @@
 }
 
 // MODAL ELECTRICA IMG SLIDER
+.carousel {
+  position: relative;
+  z-index: 10;
+  height: 40rem;
+  width: 100%;
+  margin: 0 auto;
+  // top: 6rem;
+  overflow: hidden;
+  &__track {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: transform 250ms ease-in;
+    &-container {
+    }
+  }
+  &__slide {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    bottom: 0;
+    width: 10rem;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
 
-// .slider {
-//   position: relative;
-//   z-index: 10;
-//   max-height: 40rem;
-//   width: 100%;
-//   margin: 0 auto;
-//   top: 6rem;
-//   &--track {
-//     margin: 0;
-//     padding: 0;
-//     list-style: none;
-//   }
-//   &-container {
-//     background-color: red;
-//   }
-//   &--slide {
-//     position: absolute;
-//     z-index: 20;
-//     top: 0;
-//     bottom: 0;
-//     width: 100%;
-//   }
-// }
-// .modal__text {
-//   margin-top: 36rem;
-// }
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  &__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  &__button {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    width: 6rem;
+    height: 100%;
+    cursor: pointer;
+    & .che {
+      font-size: 3rem;
+      color: $vgeWhite;
+    }
+    &--right {
+      right: 0;
+      display: flex;
+      justify-content: center;
+      .fa-chevron-right {
+        // display: flex;
+      }
+    }
+    &--left {
+      display: flex;
+      justify-content: center;
+      left: 0;
+    }
+  }
+}
+.modal__text {
+  margin-top: 36rem;
+}
 
 .modal-close {
   background: $vgeOrange;

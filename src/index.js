@@ -220,3 +220,39 @@ serviciosContainer.addEventListener('click', (e) => {
     }
   });
 });
+
+// SLIDE MODAL
+
+// PREFERIRNOS SLIDER
+const trackModal = document.querySelector('.carousel__track');
+const slidesModal = Array.from(trackModal.children);
+
+// BOTONES DE DESPLAZAMIENTO
+const nextButtonModal = document.querySelector('.carousel__button--right');
+const prevButtonModal = document.querySelector('.carousel__button--left');
+
+// // CAPTURAMOS EL ANCHO DE LOS SLIDES
+const slideWidthModal = slidesModal[0].getBoundingClientRect().width;
+
+slidesModal.forEach((s, i) => {
+  s.style.left = slideWidthModal * i + 'px';
+});
+
+const moveToSlideModal = (trackModal, currentSlideModal, targetSlideModal) => {
+  trackModal.style.transform =
+    'translateX(-' + targetSlideModal.style.left + ')';
+  currentSlideModal.classList.remove('current-slide');
+  targetSlideModal.classList.add('current-slide');
+};
+
+nextButtonModal.addEventListener('click', (e) => {
+  const currentSlideModal = trackModal.querySelector('.current-slide');
+  const nextSlideModal = currentSlideModal.nextElementSibling;
+  moveToSlideModal(trackModal, currentSlideModal, nextSlideModal);
+});
+
+prevButtonModal.addEventListener('click', (e) => {
+  const currentSlideModal = trackModal.querySelector('.current-slide');
+  const prevSlideModal = currentSlideModal.previousElementSibling;
+  moveToSlideModal(trackModal, currentSlideModal, prevSlideModal);
+});
