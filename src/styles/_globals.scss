@@ -1,112 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 0;
-    line-height: 1.5;
-    font-family: 'Poppins', sans-serif;
-    background-color: $vgeBlue;
-    height: auto;
+  margin: 0;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  background-color: $vgeBlue;
+  height: auto;
+  min-width: 320px;
 }
 
 a,
 a:visited,
 a:hover {
-    text-decoration: none;
-    // color: inherit;
+  text-decoration: none;
+  // color: inherit;
 }
 
 .flex {
-    display: flex;
-    &-jc-sb {
-        justify-content: space-between;
-    }
-    &-jc-c {
-        justify-content: center;
-    }
-    &-ai-c {
-        align-items: center;
-    }
+  display: flex;
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
 }
 
 p,
 li {
-    font-size: $font-md;
-    // color: $vgeBlue;
-    // font-weight: 200;
+  font-size: $font-md;
+  // color: $vgeBlue;
+  // font-weight: 200;
 }
 
 h2 {
-    color: $vgeOrange;
-    text-transform: uppercase;
-    font-size: $font-lg;
-    margin-bottom: 2rem;
+  color: $vgeOrange;
+  text-transform: uppercase;
+  font-size: $font-lg;
+  margin-bottom: 2rem;
 }
 
 h3 {
-    font-size: $font-lg;
+  font-size: $font-lg;
 }
-
 
 /* Highlight */
 
 *::selection {
-    background: $vgeOrange;
+  background: $vgeOrange;
 }
 
 // Visibility
 .hide-for-mobile {
-    @include breakpoint-down(medium) {
-        display: none;
-    }
+  @include breakpoint-down(medium) {
+    display: none;
+  }
 }
 
 .hide-for-desktop {
-    @include breakpoint-up(large) {
-        display: none;
-    }
+  @include breakpoint-up(large) {
+    display: none;
+  }
 }
 
 // Spacing
 .container {
-    max-width: 110rem;
-    margin: 0 auto;
-    &--all {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-    &--py {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    &--px {
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-    &--pt {
-        padding-top: 3rem;
-    }
-    &--pr {
-        padding-right: 3rem;
-    }
-    &--pb {
-        padding-bottom: 3rem;
-    }
-    &--pl {
-        padding-left: 3rem;
-    }
+  max-width: 110rem;
+  margin: 0 auto;
+  &--all {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  &--py {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  &--px {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  &--pt {
+    padding-top: 3rem;
+  }
+  &--pr {
+    padding-right: 3rem;
+  }
+  &--pb {
+    padding-bottom: 3rem;
+  }
+  &--pl {
+    padding-left: 3rem;
+  }
 }
