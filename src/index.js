@@ -212,6 +212,28 @@ serviciosContainer.addEventListener('click', (e) => {
     modal.addEventListener('animationend', modalClose);
   });
 
+  const quienesSomosMenu = document.getElementById('qs-btn');
+  const serviciosMenu = document.getElementById('servicios-btn');
+  const contactoMenu = document.getElementById('contacto-btn');
+  const logoMenu = document.getElementById('logo-header');
+
+  quienesSomosMenu.addEventListener('click', (_) => {
+    modal.style.animation = 'modalOut 300ms forwards';
+    modal.addEventListener('animationend', modalClose);
+  });
+  serviciosMenu.addEventListener('click', (_) => {
+    modal.style.animation = 'modalOut 300ms forwards';
+    modal.addEventListener('animationend', modalClose);
+  });
+  contactoMenu.addEventListener('click', (_) => {
+    modal.style.animation = 'modalOut 300ms forwards';
+    modal.addEventListener('animationend', modalClose);
+  });
+  logoMenu.addEventListener('click', (_) => {
+    modal.style.animation = 'modalOut 300ms forwards';
+    modal.addEventListener('animationend', modalClose);
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.keyCode === 27) {
       modal.style.animation = 'modalOut 300ms forwards';
@@ -221,9 +243,7 @@ serviciosContainer.addEventListener('click', (e) => {
   });
 });
 
-// SLIDE MODAL
-
-// PREFERIRNOS SLIDER
+// ELECTRICA SLIDER
 const trackModal = document.querySelector('.carousel__track');
 const slidesModal = Array.from(trackModal.children);
 
@@ -245,14 +265,341 @@ const moveToSlideModal = (trackModal, currentSlideModal, targetSlideModal) => {
   targetSlideModal.classList.add('current-slide');
 };
 
+const hideShowArrowsModal = (
+  slidesModal,
+  prevButtonModal,
+  nextButtonModal,
+  targetIndexModal
+) => {
+  if (targetIndexModal === 0) {
+    prevButtonModal.classList.add('is-hidden');
+    nextButtonModal.classList.remove('is-hidden');
+  } else if (targetIndexModal === slidesModal.length - 1) {
+    prevButtonModal.classList.remove('is-hidden');
+    nextButtonModal.classList.add('is-hidden');
+  } else {
+    prevButtonModal.classList.remove('is-hidden');
+    nextButtonModal.classList.remove('is-hidden');
+  }
+};
+
 nextButtonModal.addEventListener('click', (e) => {
   const currentSlideModal = trackModal.querySelector('.current-slide');
   const nextSlideModal = currentSlideModal.nextElementSibling;
+  const nextIndexModal = slidesModal.findIndex(
+    (slide) => slide === nextSlideModal
+  );
+
   moveToSlideModal(trackModal, currentSlideModal, nextSlideModal);
+  hideShowArrowsModal(
+    slidesModal,
+    prevButtonModal,
+    nextButtonModal,
+    nextIndexModal
+  );
 });
 
 prevButtonModal.addEventListener('click', (e) => {
   const currentSlideModal = trackModal.querySelector('.current-slide');
   const prevSlideModal = currentSlideModal.previousElementSibling;
+  const prevIndexModal = slidesModal.findIndex(
+    (slide) => slide === prevSlideModal
+  );
+
   moveToSlideModal(trackModal, currentSlideModal, prevSlideModal);
+  hideShowArrowsModal(
+    slidesModal,
+    prevButtonModal,
+    nextButtonModal,
+    prevIndexModal
+  );
+});
+
+// VIAL SLIDER
+const trackModalVial = document.querySelector('.carousel__track-vial');
+const slidesModalVial = Array.from(trackModalVial.children);
+console.log(slidesModalVial);
+// BOTONES DE DESPLAZAMIENTO
+const nextButtonModalVial = document.querySelector(
+  '.carousel__button--right-vial'
+);
+const prevButtonModalVial = document.querySelector(
+  '.carousel__button--left-vial'
+);
+
+// // CAPTURAMOS EL ANCHO DE LOS SLIDES
+const slideWidthModalVial = slidesModalVial[0].getBoundingClientRect().width;
+
+slidesModalVial.forEach((s, i) => {
+  s.style.left = slideWidthModalVial * i + 'px';
+});
+
+const moveToSlideModalVial = (
+  trackModalVial,
+  currentSlideModalVial,
+  targetSlideModalVial
+) => {
+  trackModalVial.style.transform =
+    'translateX(-' + targetSlideModalVial.style.left + ')';
+  currentSlideModalVial.classList.remove('current-slide-vial');
+  targetSlideModalVial.classList.add('current-slide-vial');
+};
+
+const hideShowArrowsModalVial = (
+  slidesModalVial,
+  prevButtonModalVial,
+  nextButtonModalVial,
+  targetIndexModalVial
+) => {
+  if (targetIndexModalVial === 0) {
+    prevButtonModalVial.classList.add('is-hidden');
+    nextButtonModalVial.classList.remove('is-hidden');
+  } else if (targetIndexModalVial === slidesModalVial.length - 1) {
+    prevButtonModalVial.classList.remove('is-hidden');
+    nextButtonModalVial.classList.add('is-hidden');
+  } else {
+    prevButtonModalVial.classList.remove('is-hidden');
+    nextButtonModalVial.classList.remove('is-hidden');
+  }
+};
+
+nextButtonModalVial.addEventListener('click', (e) => {
+  const currentSlideModalVial = trackModalVial.querySelector(
+    '.current-slide-vial'
+  );
+  const nextSlideModalVial = currentSlideModalVial.nextElementSibling;
+  const nextIndexModalVial = slidesModalVial.findIndex(
+    (slide) => slide === nextSlideModalVial
+  );
+
+  moveToSlideModalVial(
+    trackModalVial,
+    currentSlideModalVial,
+    nextSlideModalVial
+  );
+  hideShowArrowsModalVial(
+    slidesModalVial,
+    prevButtonModalVial,
+    nextButtonModalVial,
+    nextIndexModalVial
+  );
+});
+
+prevButtonModalVial.addEventListener('click', (e) => {
+  const currentSlideModalVial = trackModalVial.querySelector(
+    '.current-slide-vial'
+  );
+  const prevSlideModalVial = currentSlideModalVial.previousElementSibling;
+  const prevIndexModalVial = slidesModalVial.findIndex(
+    (slide) => slide === prevSlideModalVial
+  );
+
+  moveToSlideModalVial(
+    trackModalVial,
+    currentSlideModalVial,
+    prevSlideModalVial
+  );
+  hideShowArrowsModalVial(
+    slidesModalVial,
+    prevButtonModalVial,
+    nextButtonModalVial,
+    prevIndexModalVial
+  );
+});
+
+// ESTRUCTURAL INMOBILIARIO SLIDER
+const trackModalInmobiliario = document.querySelector(
+  '.carousel__track-inmobiliario'
+);
+const slidesModalInmobiliario = Array.from(trackModalInmobiliario.children);
+console.log(slidesModalInmobiliario);
+// BOTONES DE DESPLAZAMIENTO
+const nextButtonModalInmobiliario = document.querySelector(
+  '.carousel__button--right-inmobiliario'
+);
+const prevButtonModalInmobiliario = document.querySelector(
+  '.carousel__button--left-inmobiliario'
+);
+
+// // CAPTURAMOS EL ANCHO DE LOS SLIDES
+const slideWidthModalInmobiliario =
+  slidesModalInmobiliario[0].getBoundingClientRect().width;
+
+slidesModalInmobiliario.forEach((s, i) => {
+  s.style.left = slideWidthModalInmobiliario * i + 'px';
+});
+
+const moveToSlideModalInmobiliario = (
+  trackModalInmobiliario,
+  currentSlideModalInmobiliario,
+  targetSlideModalInmobiliario
+) => {
+  trackModalInmobiliario.style.transform =
+    'translateX(-' + targetSlideModalInmobiliario.style.left + ')';
+  currentSlideModalInmobiliario.classList.remove('current-slide-inmobiliario');
+  targetSlideModalInmobiliario.classList.add('current-slide-inmobiliario');
+};
+
+const hideShowArrowsModalInmobiliario = (
+  slidesModalInmobiliario,
+  prevButtonModalInmobiliario,
+  nextButtonModalInmobiliario,
+  targetIndexModalInmobiliario
+) => {
+  if (targetIndexModalInmobiliario === 0) {
+    prevButtonModalInmobiliario.classList.add('is-hidden');
+    nextButtonModalInmobiliario.classList.remove('is-hidden');
+  } else if (
+    targetIndexModalInmobiliario ===
+    slidesModalInmobiliario.length - 1
+  ) {
+    prevButtonModalInmobiliario.classList.remove('is-hidden');
+    nextButtonModalInmobiliario.classList.add('is-hidden');
+  } else {
+    prevButtonModalInmobiliario.classList.remove('is-hidden');
+    nextButtonModalInmobiliario.classList.remove('is-hidden');
+  }
+};
+
+nextButtonModalInmobiliario.addEventListener('click', (e) => {
+  const currentSlideModalInmobiliario = trackModalInmobiliario.querySelector(
+    '.current-slide-inmobiliario'
+  );
+  const nextSlideModalInmobiliario =
+    currentSlideModalInmobiliario.nextElementSibling;
+  const nextIndexModalInmobiliario = slidesModalInmobiliario.findIndex(
+    (slide) => slide === nextSlideModalInmobiliario
+  );
+
+  moveToSlideModalInmobiliario(
+    trackModalInmobiliario,
+    currentSlideModalInmobiliario,
+    nextSlideModalInmobiliario
+  );
+  hideShowArrowsModalInmobiliario(
+    slidesModalInmobiliario,
+    prevButtonModalInmobiliario,
+    nextButtonModalInmobiliario,
+    nextIndexModalInmobiliario
+  );
+});
+
+prevButtonModalInmobiliario.addEventListener('click', (e) => {
+  const currentSlideModalInmobiliario = trackModalInmobiliario.querySelector(
+    '.current-slide-inmobiliario'
+  );
+  const prevSlideModalInmobiliario =
+    currentSlideModalInmobiliario.previousElementSibling;
+  const prevIndexModalInmobiliario = slidesModalInmobiliario.findIndex(
+    (slide) => slide === prevSlideModalInmobiliario
+  );
+
+  moveToSlideModalInmobiliario(
+    trackModalInmobiliario,
+    currentSlideModalInmobiliario,
+    prevSlideModalInmobiliario
+  );
+  hideShowArrowsModalInmobiliario(
+    slidesModalInmobiliario,
+    prevButtonModalInmobiliario,
+    nextButtonModalInmobiliario,
+    prevIndexModalInmobiliario
+  );
+});
+
+// ESTRUCTURAL INDUSTRIAL SLIDER
+const trackModalIndustrial = document.querySelector(
+  '.carousel__track-industrial'
+);
+const slidesModalIndustrial = Array.from(trackModalIndustrial.children);
+console.log(slidesModalIndustrial);
+// BOTONES DE DESPLAZAMIENTO
+const nextButtonModalIndustrial = document.querySelector(
+  '.carousel__button--right-industrial'
+);
+const prevButtonModalIndustrial = document.querySelector(
+  '.carousel__button--left-industrial'
+);
+
+// // CAPTURAMOS EL ANCHO DE LOS SLIDES
+const slideWidthModalIndustrial =
+  slidesModalIndustrial[0].getBoundingClientRect().width;
+
+slidesModalIndustrial.forEach((s, i) => {
+  s.style.left = slideWidthModalIndustrial * i + 'px';
+});
+
+const moveToSlideModalIndustrial = (
+  trackModalIndustrial,
+  currentSlideModalIndustrial,
+  targetSlideModalIndustrial
+) => {
+  trackModalIndustrial.style.transform =
+    'translateX(-' + targetSlideModalIndustrial.style.left + ')';
+  currentSlideModalIndustrial.classList.remove('current-slide-industrial');
+  targetSlideModalIndustrial.classList.add('current-slide-industrial');
+};
+
+const hideShowArrowsModalIndustrial = (
+  slidesModalIndustrial,
+  prevButtonModalIndustrial,
+  nextButtonModalIndustrial,
+  targetIndexModalIndustrial
+) => {
+  if (targetIndexModalIndustrial === 0) {
+    prevButtonModalIndustrial.classList.add('is-hidden');
+    nextButtonModalIndustrial.classList.remove('is-hidden');
+  } else if (targetIndexModalIndustrial === slidesModalIndustrial.length - 1) {
+    prevButtonModalIndustrial.classList.remove('is-hidden');
+    nextButtonModalInmobiliario.classList.add('is-hidden');
+  } else {
+    prevButtonModalIndustrial.classList.remove('is-hidden');
+    nextButtonModalIndustrial.classList.remove('is-hidden');
+  }
+};
+
+nextButtonModalIndustrial.addEventListener('click', (e) => {
+  const currentSlideModalIndustrial = trackModalIndustrial.querySelector(
+    '.current-slide-industrial'
+  );
+  const nextSlideModalIndustrial =
+    currentSlideModalIndustrial.nextElementSibling;
+  const nextIndexModalIndustrial = slidesModalIndustrial.findIndex(
+    (slide) => slide === nextSlideModalIndustrial
+  );
+
+  moveToSlideModalIndustrial(
+    trackModalIndustrial,
+    currentSlideModalIndustrial,
+    nextSlideModalIndustrial
+  );
+  hideShowArrowsModalIndustrial(
+    slidesModalIndustrial,
+    prevButtonModalIndustrial,
+    nextButtonModalIndustrial,
+    nextIndexModalIndustrial
+  );
+});
+
+prevButtonModalIndustrial.addEventListener('click', (e) => {
+  const currentSlideModalIndustrial = trackModalIndustrial.querySelector(
+    '.current-slide-industrial'
+  );
+  const prevSlideModalIndustrial =
+    currentSlideModalIndustrial.previousElementSibling;
+  const prevIndexModalIndustrial = slidesModalIndustrial.findIndex(
+    (slide) => slide === prevSlideModalIndustrial
+  );
+
+  moveToSlideModalIndustrial(
+    trackModalIndustrial,
+    currentSlideModalIndustrial,
+    prevSlideModalIndustrial
+  );
+  hideShowArrowsModalIndustrial(
+    slidesModalIndustrial,
+    prevButtonModalIndustrial,
+    nextButtonModalIndustrial,
+    prevIndexModalIndustrial
+  );
 });

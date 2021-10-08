@@ -1,6 +1,16 @@
 import electrica from '@images/servicios/electrica/01.jpg';
 import electricados from '@images/servicios/electrica/02.jpg';
 import electricatres from '@images/servicios/electrica/03.jpg';
+import vial from '@images/servicios/vial/01.jpg';
+import vialdos from '@images/servicios/vial/02.jpg';
+import vialtres from '@images/servicios/vial/03.jpg';
+import inmobiliario from '@images/servicios/estructural/inmobiliario/01.jpg';
+import inmobiliariodos from '@images/servicios/estructural/inmobiliario/02.jpg';
+import inmobiliariotres from '@images/servicios/estructural/inmobiliario/03.jpg';
+import industrial from '@images/servicios/estructural/industrial/01.jpg';
+import industrialdos from '@images/servicios/estructural/industrial/02.jpg';
+import industrialtres from '@images/servicios/estructural/industrial/03.jpg';
+
 const Servicios = () => {
   const view = `
     <section class="servicios hide-for-desktop">
@@ -30,7 +40,7 @@ const Servicios = () => {
 
           // SLIDER IMAGE ELECTRICA
           <div class="carousel">
-            <div class="carousel__button carousel__button--left">
+            <div class="carousel__button carousel__button--left is-hidden">
               <i class="che fas fa-chevron-left"></i>
             </div>
             <div class="carousel__track-container">
@@ -81,24 +91,125 @@ const Servicios = () => {
         >
 
         <!-- ================= MODAL ESTRUCTURAL ===================== -->
-        <div class="modal modal__estructural">
+        <div class="modal ">
           <button class="modal-close">
             <i class="fas fa-times"></i>
           </button>
-          <figure class="modal__estructural">
-            <div class="modal__img">
-              <img
-                src="${electrica}"
-                alt="Cables de electricidad de alta tensión"
-              />
-            </div>
+          
             <figcaption>
-              <div class="modal__title"><h3>Ingeniería Estructural.</h3></div>
+              <div class="modal__title modal__estructural"><h3>Ingeniería Estructural.</h3></div>
               <p>
               Con sólida base en el área, VGE Ingeniería entrega servicios dedicados al cálculo estructural de proyectos del sector inmobiliario como también del industrial, aportando con soluciones en acero y hormigón armado, así como en la verificación estructural de los elementos que componen un sistema resistente.
               </p>
             </figcaption>
           </figure>
+
+          <div class="icon">
+          <i class="fas fa-chevron-down"></i>
+          </div>
+
+          <figure class="slider__estructural">
+          <div class="carousel">
+            <div class="carousel__button carousel__button--left carousel__button--left-inmobiliario is-hidden">
+              <i class="che fas fa-chevron-left"></i>
+            </div>
+            <div class="carousel__track-container">
+              <ul class="carousel__track carousel__track-inmobiliario">
+                <li class="carousel__slide current-slide-inmobiliario">
+                  <img class='carousel__image' src="${inmobiliario}" alt="Cables de alta tensión">
+                </li>
+                <li class="carousel__slide current-slide-einmobiliario">
+                  <img class='carousel__image' src="${inmobiliariodos}" alt="Cables de alta tensión">
+                </li>
+                <li class="carousel__slide current-slide-inmobiliario">
+                  <img class='carousel__image' src="${inmobiliariotres}" alt="Cables de alta tensión">
+                </li>
+              </ul>
+            </div>
+            <div class="carousel__button carousel__button--right carousel__button--right-inmobiliario">
+              <i class="che fas fa-chevron-right"></i>
+            </div>
+          </div>
+            <figcaption>
+              <div class="modal__title"><h3>Sector Inmobiliario</h3></div>
+              <p>
+              Diseño y cálculo de estructuras de acero y hormigón, tanto para edificación en altura como proyectos habitacionales en extensión. 
+              </p>
+              <div class="modal__list">
+                <li>
+                Verificación structural resistente de ventanas y balcones.
+                </li>
+                <li>
+                Cierres perimetrales.
+                </li>
+                <li>
+                Instalación de Faena.
+                </li>
+                <li>
+                Cálculo structural de sistemas de mitigación de ruido y polvo.
+                </li>
+              </div>
+            </figcaption>
+          </figure>
+
+          <div class="icon">
+          <i class="fas fa-chevron-down"></i>
+          </div>
+
+          <figure class="slider__estructural">
+          <div class="carousel">
+            <div class="carousel__button carousel__button--left carousel__button--left-industrial is-hidden">
+              <i class="che fas fa-chevron-left"></i>
+            </div>
+            <div class="carousel__track-container">
+              <ul class="carousel__track carousel__track-industrial">
+                <li class="carousel__slide current-slide-industrial">
+                  <img class='carousel__image' src="${industrial}" alt="Cables de alta tensión">
+                </li>
+                <li class="carousel__slide current-slide-industrial">
+                  <img class='carousel__image' src="${industrialdos}" alt="Cables de alta tensión">
+                </li>
+                <li class="carousel__slide current-slide-industrial">
+                  <img class='carousel__image' src="${industrialtres}" alt="Cables de alta tensión">
+                </li>
+              </ul>
+            </div>
+            <div class="carousel__button carousel__button--right carousel__button--right-industrial">
+              <i class="che fas fa-chevron-right"></i>
+            </div>
+          </div>
+            <figcaption>
+              <div class="modal__title"><h3>Sector Industrial</h3></div>
+              <p>
+              Desarrollo de proyectos de ingeniería y verificación estructural, de elementos resistentes y no resistentes. 
+              </p>
+              <div class="modal__list">
+                <li>
+                Galpones de acero y naves industriales
+                </li>
+                <li>
+                Barandas de acero
+                </li>
+                <li>
+                Fundaciones
+                </li>
+                <li>
+                Cercos
+                </li>
+                <li>
+                Plataformas de operación de equipos.
+                </li>
+                <li>
+                Estanques.
+                </li>
+                <li>
+                Adecuaciones de estructuras existentes.
+                </li>
+              </div>
+            </figcaption>
+          </figure>
+
+
         </div>
         <!-- =============== / MODAL ESTRUCTURA ===================  -->
 
@@ -109,12 +220,30 @@ const Servicios = () => {
             <i class="fas fa-times"></i>
           </button>
           <figure class="modal__electrica">
-            <div class="modal__img">
-              <img
-                src="${electrica}"
-                alt="Cables de electricidad de alta tensión"
-              />
+          // SLIDER IMAGE VIAL
+          <div class="carousel">
+            <div class="carousel__button carousel__button--left carousel__button--left-vial is-hidden">
+              <i class="che fas fa-chevron-left"></i>
             </div>
+            <div class="carousel__track-container">
+              <ul class="carousel__track carousel__track-vial">
+                <li class="carousel__slide current-slide-vial">
+                  <img class='carousel__image' src="${vial}" alt="Cables de alta tensión">
+                </li>
+                <li class="carousel__slide current-slide-vial">
+                  <img class='carousel__image' src="${vialdos}" alt="Cables de alta tensión">
+                </li>
+                <li class="carousel__slide current-slide-vial">
+                  <img class='carousel__image' src="${vialtres}" alt="Cables de alta tensión">
+                </li>
+                
+                
+              </ul>
+            </div>
+            <div class="carousel__button carousel__button--right carousel__button--right-vial">
+            <i class="che fas fa-chevron-right"></i>
+            </div>
+          </div>
             <figcaption>
               <div class="modal__title"><h3>Ingeniería Vial</h3></div>
               <p>

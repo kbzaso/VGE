@@ -175,18 +175,22 @@
     margin-top: 2rem;
   }
   &__list {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem 0 0 0;
     list-style: none;
+
     ::marker {
       font-family: 'Font Awesome 5 Pro';
       font-weight: 900;
       content: '\f00c';
-      color: $vgeOrange;
+      color: $vgeCian;
     }
     li {
       margin-top: 1rem;
-      // padding-left: 1rem;
+      padding-left: 0.5rem;
+      width: 90%;
     }
   }
 
@@ -277,6 +281,11 @@
     width: 6rem;
     height: 100%;
     cursor: pointer;
+    &:active {
+      background-color: transparent;
+      border: none !important;
+      outline: none !important;
+    }
     & .che {
       font-size: 3rem;
       color: $vgeWhite;
@@ -318,4 +327,20 @@
   &:active {
     background-color: $vgeBlue;
   }
+}
+
+.modal__estructural {
+  margin-top: 10rem;
+}
+
+.slider__estructural {
+  margin-top: 5rem;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  font-size: $font-lg;
+  margin-top: 5rem;
+  color: $vgeCian;
 }
