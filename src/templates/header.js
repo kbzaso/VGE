@@ -1,5 +1,5 @@
 const Header = () => {
-    const view = `
+  const view = `
     <section class="hero" role="img" aria-label="Image Description">
         <div class="hero__text">
             <h1>
@@ -8,10 +8,13 @@ const Header = () => {
             <p>
                 Queremos entregarte soluciones prácticas e innovadoras, preocupados por la eficiencia desde su etapa conceptual hasta el desarrollo de la Ingeniería en detalle.
             </p>
+            <div class="icon">
+          <i class="fas fa-chevron-down"></i>
+          </div>
         </div>
     </section>
   `;
-    return view;
+  return view;
 };
 
 export default Header;

@@ -104,7 +104,7 @@ const Servicios = () => {
             </figcaption>
           </figure>
 
-          <div class="icon">
+          <div class="icon cian">
           <i class="fas fa-chevron-down"></i>
           </div>
 
@@ -152,7 +152,7 @@ const Servicios = () => {
             </figcaption>
           </figure>
 
-          <div class="icon">
+          <div class="icon cian">
           <i class="fas fa-chevron-down"></i>
           </div>
 

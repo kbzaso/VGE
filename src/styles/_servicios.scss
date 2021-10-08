@@ -342,5 +342,20 @@
   justify-content: center;
   font-size: $font-lg;
   margin-top: 5rem;
+  animation: float 1s ease-in-out infinite;
+}
+.cian {
   color: $vgeCian;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
