@@ -17,7 +17,7 @@ const Servicios = () => {
       <div class="servicios__text">
         <h2>Nuestros Servicios</h2>
         <h3>
-          Uniendo tres ramas de la Ingeniería Civil, buscamos proyectar ...
+        Nos comprometemos a entregar la asistencia profesional que tu proyecto requiere.
         </h3>
       </div>
       

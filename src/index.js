@@ -525,6 +525,10 @@ const prevButtonModalIndustrial = document.querySelector(
 const slideWidthModalIndustrial =
   slidesModalIndustrial[0].getBoundingClientRect().width;
 
+console.log(slideWidthModalIndustrial);
+console.log(slideWidthModalInmobiliario);
+console.log(slideWidthModalVial);
+console.log(slideWidth);
 slidesModalIndustrial.forEach((s, i) => {
   s.style.left = slideWidthModalIndustrial * i + 'px';
 });
