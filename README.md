@@ -9,9 +9,7 @@
 ## Por hacer
 
 - formulario funcional
-- favicon
 - imagenes optimizadas
-- modal de servicios en (desktop)
-- se montan las imagenes en slider
-- guiones en listas de servicios
-- favicon
+- Activar modal de servicios (desktop)
+- Somethimes the modal slider mount each others
+- Sector industrial slider is broke

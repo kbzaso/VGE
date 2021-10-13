@@ -54,6 +54,9 @@
     }
     a {
       max-width: 30%;
+      &:visited {
+        color: inherit;
+      }
     }
     .card {
       margin-top: 1rem;
@@ -180,17 +183,13 @@
     align-items: center;
     padding: 2rem 0 0 0;
     list-style: none;
-
-    ::marker {
-      font-family: 'Font Awesome 5 Pro';
-      font-weight: 900;
-      content: '\f00c';
-      color: $vgeCian;
-    }
     li {
       margin-top: 1rem;
-      padding-left: 0.5rem;
       width: 90%;
+      &::before {
+        content: '\2022';
+        color: $vgeOrange;
+      }
     }
   }
 

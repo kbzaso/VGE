@@ -581,7 +581,7 @@ nextButtonModalIndustrial.addEventListener('click', (e) => {
     slidesModalIndustrial,
     prevButtonModalIndustrial,
     nextButtonModalIndustrial,
-    nextIndexModalIndustrial
+    prevIndexModalIndustrial
   );
 });
 
