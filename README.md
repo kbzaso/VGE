@@ -10,6 +10,7 @@
 
 - formulario funcional
 - imagenes optimizadas
-- Activar modal de servicios (desktop)
 - Somethimes the modal slider mount each others
 - Sector industrial slider is broke
+- Activar modal de servicios (desktop)
+- change form input for a button

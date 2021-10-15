@@ -133,10 +133,10 @@
   }
 }
 
-.modal {
+.modalMobile {
   position: fixed;
   // display: block;
-  z-index: 90;
+  z-index: 9;
   padding: 1rem 3rem;
   top: 4rem;
   bottom: 0;
@@ -147,16 +147,13 @@
   overflow-y: scroll;
   overflow-x: hidden;
   width: 100%;
+
   // BORRAR
   // display: none;
   transform: translatex(100%);
   &.is-open {
     display: block;
     transform: translatex(-100%);
-  }
-  figcaption {
-    margin-bottom: 2rem;
-    margin-top: 5rem;
   }
   &__img {
     margin-top: 6rem;
@@ -356,5 +353,21 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+figcaption {
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  p {
+  }
+  li {
+    margin-top: 1rem;
+    width: 90%;
+    list-style: none;
+    &::before {
+      content: '\2022';
+      color: $vgeOrange;
+    }
   }
 }

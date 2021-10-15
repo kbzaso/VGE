@@ -2,10 +2,13 @@ import Nav from '@templates/nav.js';
 import Header from '@templates/header.js';
 import QuienesSomos from '@templates/quienes-somos.js';
 import Servicios from '@templates/servicios.js';
+import ServiciosDesktop from '@templates/serviciosDesktop.js';
 import Preferirnos from '@templates/preferirnos.js';
 import Contacto from '@templates/contacto.js';
 import Footer from '@templates/footer.js';
 import '@styles/main.scss';
+
+import MicroModal from 'micromodal';
 // import '@utils/menu-mobile.js';
 // import logo from '@images/vge-logo.svg';
 
@@ -14,6 +17,7 @@ import '@styles/main.scss';
   const header = null || document.getElementById('header');
   const qs = null || document.getElementById('quienes-somos');
   const servicios = null || document.getElementById('servicios');
+  const serviciosdesktop = null || document.getElementById('serviciosDesktop');
   const preferirnos = null || document.getElementById('preferirnos');
   const contacto = null || document.getElementById('contacto');
   const footer = null || document.getElementById('footer');
@@ -21,6 +25,7 @@ import '@styles/main.scss';
   header.innerHTML = Header();
   qs.innerHTML = QuienesSomos();
   servicios.innerHTML = Servicios();
+  serviciosdesktop.innerHTML = ServiciosDesktop();
   preferirnos.innerHTML = Preferirnos();
   contacto.innerHTML = Contacto();
   footer.innerHTML = Footer();
@@ -607,3 +612,124 @@ prevButtonModalIndustrial.addEventListener('click', (e) => {
     prevIndexModalIndustrial
   );
 });
+
+const buttonElectrica = document.getElementById('btnModal');
+const buttonEstructural = document.getElementById('btnModalEstructural');
+const buttonVial = document.getElementById('btnModalVial');
+const buttonCloseElectrica = document.getElementById('closeElectrica');
+const buttonCloseVial = document.getElementById('closeVial');
+const buttonCloseEstructural = document.getElementById('closeEstructural');
+
+buttonElectrica.addEventListener('click', function () {
+  MicroModal.show('modal-1');
+});
+
+buttonEstructural.addEventListener('click', function () {
+  MicroModal.show('modal-2');
+});
+
+buttonVial.addEventListener('click', function () {
+  MicroModal.show('modal-3');
+});
+
+buttonCloseElectrica.addEventListener('click', function () {
+  MicroModal.close('modal-1');
+});
+
+buttonCloseVial.addEventListener('click', function () {
+  MicroModal.close('modal-3');
+});
+buttonCloseEstructural.addEventListener('click', function () {
+  MicroModal.close('modal-2');
+});
+
+/* IE Polyfull */
+
+if (typeof Object.assign != 'function') {
+  Object.defineProperty(Object, 'assign', {
+    value: function assign(target, varArgs) {
+      'use strict';
+      if (target == null) {
+        throw new TypeError('Cannot convert undefined or null to object');
+      }
+      var to = Object(target);
+      for (var index = 1; index < arguments.length; index++) {
+        var nextSource = arguments[index];
+        if (nextSource != null) {
+          for (var nextKey in nextSource) {
+            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+              to[nextKey] = nextSource[nextKey];
+            }
+          }
+        }
+      }
+      return to;
+    },
+    writable: true,
+    configurable: true,
+  });
+}
+
+if (!Array.from) {
+  Array.from = (function () {
+    var toStr = Object.prototype.toString;
+    var isCallable = function (fn) {
+      return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
+    };
+    var toInteger = function (value) {
+      var number = Number(value);
+      if (isNaN(number)) {
+        return 0;
+      }
+      if (number === 0 || !isFinite(number)) {
+        return number;
+      }
+      return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
+    };
+    var maxSafeInteger = Math.pow(2, 53) - 1;
+    var toLength = function (value) {
+      var len = toInteger(value);
+      return Math.min(Math.max(len, 0), maxSafeInteger);
+    };
+
+    return function from(arrayLike) {
+      var C = this;
+      var items = Object(arrayLike);
+      if (arrayLike == null) {
+        throw new TypeError(
+          'Array.from requires an array-like object - not null or undefined'
+        );
+      }
+      var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
+      var T;
+      if (typeof mapFn !== 'undefined') {
+        if (!isCallable(mapFn)) {
+          throw new TypeError(
+            'Array.from: when provided, the second argument must be a function'
+          );
+        }
+        if (arguments.length > 2) {
+          T = arguments[2];
+        }
+      }
+      var len = toLength(items.length);
+      var A = isCallable(C) ? Object(new C(len)) : new Array(len);
+      var k = 0;
+      var kValue;
+      while (k < len) {
+        kValue = items[k];
+        if (mapFn) {
+          A[k] =
+            typeof T === 'undefined'
+              ? mapFn(kValue, k)
+              : mapFn.call(T, kValue, k);
+        } else {
+          A[k] = kValue;
+        }
+        k += 1;
+      }
+      A.length = len;
+      return A;
+    };
+  })();
+}

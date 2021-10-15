@@ -29,15 +29,12 @@ const Servicios = () => {
           ><span>Ingeniería de Transmisión Eléctrica</span></a
         >
         <!-- ======================== MODAL ELECTRICA =====================-->
-        <div class="modal modal__electrica">
+        <div class="modalMobile modal__electrica">
           <button class="modal-close">
             <i class="fas fa-times"></i>
           </button>
 
           <figure class="modal__electrica">
-
-
-
           // SLIDER IMAGE ELECTRICA
           <div class="carousel">
             <div class="carousel__button carousel__button--left is-hidden">
@@ -91,11 +88,11 @@ const Servicios = () => {
         >
 
         <!-- ================= MODAL ESTRUCTURAL ===================== -->
-        <div class="modal ">
+        <div class="modalMobile ">
           <button class="modal-close">
             <i class="fas fa-times"></i>
           </button>
-          
+          <figure>
             <figcaption>
               <div class="modal__title modal__estructural"><h3>Ingeniería Estructural.</h3></div>
               <p>
@@ -215,12 +212,11 @@ const Servicios = () => {
 
         <a class="servicios__menu-link" href=""><span>Ingeniería Vial</span></a>
         <!-- ======================== MODAL VIAL =====================-->
-        <div class="modal modal__vial">
+        <div class="modalMobile modal__vial">
           <button class="modal-close">
             <i class="fas fa-times"></i>
           </button>
           <figure class="modal__electrica">
-          // SLIDER IMAGE VIAL
           <div class="carousel">
             <div class="carousel__button carousel__button--left carousel__button--left-vial is-hidden">
               <i class="che fas fa-chevron-left"></i>
@@ -286,7 +282,7 @@ const Servicios = () => {
       </div>
 
       <div class="servicios-desktop__cards container">
-        <a href="">
+        <a href='#' data-micromodal-trigger="modal-1" id='btnModal'>
           <div class="card">
             <div class="card__image electrica">
               <div class="card__content">
@@ -301,7 +297,7 @@ const Servicios = () => {
           </div>
         </a>
 
-        <a href="">
+        <a href='#' data-micromodal-trigger="modal-2" id='btnModalEstructural'>
           <div class="card">
             <div class="card__image estructural">
               <div class="card__content">
@@ -317,7 +313,7 @@ const Servicios = () => {
           </div>
         </a>
 
-        <a href="">
+        <a href='#' data-micromodal-trigger="modal-2" id='btnModalVial'>
           <div class="card">
             <div class="card__image vial">
               <div class="card__content">
@@ -332,7 +328,7 @@ const Servicios = () => {
           </div>
         </a>
       </div>
-    </div>
+    </div>        
   `;
   return view;
 };
