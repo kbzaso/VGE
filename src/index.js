@@ -781,3 +781,116 @@ if (!Array.from) {
     };
   })();
 }
+
+let newDate = new Date();
+let month = newDate.getMonth() + 1; //months from 1-12
+let day = newDate.getDate();
+let year = newDate.getFullYear();
+var fecha = `${year}-${month}-${day}`;
+var weekday = newDate.getDay();
+
+window.addEventListener('load', function () {
+  if ([6].includes(weekday)) {
+    console.log('Es Sabado');
+    Date.prototype.addDays = function (days) {
+      var date = new Date(this.valueOf());
+      date.setDate(date.getDate() + days);
+      return date;
+    };
+
+    var date = new Date();
+    console.log(date);
+    const plusSaturday = date.addDays(2);
+    console.log(plusSaturday);
+
+    let monthSaturday = plusSaturday.getMonth() + 1; //months from 1-12
+    let daySaturday = plusSaturday.getDate();
+    let yearSaturday = plusSaturday.getFullYear();
+    var fechaSaturday = `${yearSaturday}-${monthSaturday}-${daySaturday}`;
+    let daySaturdayNumber = Number(daySaturday);
+
+    console.log(daySaturdayNumber);
+    //  SI EL DIA ES MENOR A 10 AGREGA UN 0 ADELANTE
+    if (daySaturdayNumber < 10) {
+      let dayString = daySaturdayNumber.toString();
+      let finalDay = dayString.padStart(2, '0');
+      let newDateSaturday = `${yearSaturday}-${monthSaturday}-${finalDay}`;
+      console.log(newDateSaturday);
+      document.querySelector('#date').setAttribute('value', newDateSaturday);
+      document.querySelector('#date').setAttribute('min', newDateSaturday);
+    } else {
+      console.log(dayString + 'DEBERIA SER 01');
+      let dayString = daySaturday.toString();
+      const finalDay = dayString.padStart(2, '0');
+      let newDateSaturday = `${yearSaturday}-${month}-${finalDay}`;
+
+      document.querySelector('#date').setAttribute('value', newDateSaturday);
+      document.querySelector('#date').setAttribute('min', newDateSaturday);
+    }
+  } else if ([0].includes(weekday)) {
+    console.log('Domingo');
+    Date.prototype.addDays = function (days) {
+      var date = new Date(this.valueOf());
+      date.setDate(date.getDate() + days);
+      return date;
+    };
+
+    var date = new Date();
+    console.log(date);
+    const plusSunday = date.addDays(1);
+    console.log(plusSunday);
+
+    let monthSunday = plusSunday.getMonth() + 1; //months from 1-12
+    let daySunday = plusSunday.getDate();
+    let yearSunday = plusSunday.getFullYear();
+    var fechaSunday = `${yearSunday}-${monthSunday}-${daySunday}`;
+    let daySundayNumber = Number(daySunday);
+    //  SI EL DIA ES MENOR A 10 AGREGA UN 0 ADELANTE
+    if (daySundayNumber < 10) {
+      let dayString = daySundayNumber.toString();
+      let finalDay = dayString.padStart(2, '0');
+      let newDateSunday = `${yearSunday}-${monthSunday}-${finalDay}`;
+      console.log(newDateSunday);
+      document.querySelector('#date').setAttribute('value', newDateSunday);
+      document.querySelector('#date').setAttribute('min', newDateSunday);
+    } else {
+      let newDateSunday = `${yearSunday}-${monthSunday}-${daySundayNumber}`;
+      document.querySelector('#date').setAttribute('value', newDateSunday);
+      document.querySelector('#date').setAttribute('min', newDateSunday);
+    }
+  } else {
+    let dayNumber = Number(day);
+
+    console.log(dayNumber);
+    //  SI EL DIA ES MENOR A 10 AGREGA UN 0 ADELANTE
+    if (dayNumber < 10) {
+      let dayString = dayNumber.toString();
+      let finalDay = dayString.padStart(2, '0');
+      let newDateWeek = `${year}-${month}-${finalDay}`;
+      console.log(finalDay);
+      document.querySelector('#date').setAttribute('value', newDateWeek);
+      document.querySelector('#date').setAttribute('min', newDateWeek);
+    } else {
+      let dayString = dayNumber.toString();
+      const finalDay = dayString.padStart(2, '0');
+      let newDateWeek = `${year}-${month}-${finalDay}`;
+
+      document.querySelector('#date').setAttribute('value', newDateWeek);
+      document.querySelector('#date').setAttribute('min', newDateWeek);
+    }
+  }
+});
+let dayString = day.toString();
+let finalDay = dayString.padStart(2, '0');
+let newDateWeek = `${year}-${month}-${finalDay}`;
+const picker = document.getElementById('date');
+picker.addEventListener('input', function (e) {
+  let day = new Date(this.value).getUTCDay();
+  if ([6, 0].includes(day)) {
+    console.log(newDateWeek);
+    e.preventDefault();
+    this.value = newDateWeek;
+
+    alert('Weekends not allowed');
+  }
+});

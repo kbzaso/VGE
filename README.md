@@ -8,9 +8,8 @@
 
 ## Por hacer
 
-- formulario funcional
 - imagenes optimizadas
 - Somethimes the modal slider mount each others
-- Sector industrial slider is broke
-- Activar modal de servicios (desktop)
-- change form input for a button
+- Favicon
+- Scroll falla en mobile
+- Slider en desktop

@@ -1,6 +1,9 @@
 // import planos from '@images/planos.jpg';
 
 const Contacto = () => {
+  // let today = new Date().toISOString().substr(0, 10);
+  // document.querySelector("#today").value = today;
+
   const view = `
   <div class="contacto container flex-jc-c">
     <div class="contacto__info">
@@ -24,7 +27,7 @@ const Contacto = () => {
         <div class="elegirFecha">
           <div class="date">
             <label for="date">Fecha</label>
-            <input id='date' name='date' type="date" required>
+            <input id='date' name='date' min='' asp-format="{0:yyyy-MM-dd}" type="date" required>
           </div>
           
           <div class="checkbox">
