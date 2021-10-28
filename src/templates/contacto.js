@@ -1,7 +1,7 @@
 // import planos from '@images/planos.jpg';
 
 const Contacto = () => {
-    const view = `
+  const view = `
   <div class="contacto container flex-jc-c">
     <div class="contacto__info">
       <h2>Contacto</h2>
@@ -9,22 +9,22 @@ const Contacto = () => {
       <p>Ingresa tus datos en los recuadros correspondientes y cuéntanos cuál segmento horario te es óptimo para agendar una reunión. Nos pondremos en contacto contigo cuanto antes vía mail para concretar el encuentro online y conocer tu proyecto.</p>
     </div>
     <div class="contacto__form">
-      <form action="">
+      <form action="https://formsubmit.co/alejandro.sapa@gmail.com" method="POST">
       <div class='name'>
           <label for="name">Nombre</label>
-          <input id='name' class='effect-11' name='name' type="text">
+          <input id='name' class='effect-11' name='name' type="text" required>
           <span class="focus-bg"></span>
         </div>
 
         <div class='email'>
         <label for="email">Email</label>
-        <input id='email' name='email' type="text">
+        <input id='email' name='email' type="text" required>
         </div>
 
         <div class="elegirFecha">
           <div class="date">
             <label for="date">Fecha</label>
-            <input id='date' name='date' type="date">
+            <input id='date' name='date' type="date" required>
           </div>
           
           <div class="checkbox">
@@ -45,15 +45,16 @@ const Contacto = () => {
 
         <div class="message">
         <label for="message">Mensaje</label>
-        <textarea rows="6" id='message' placeholder='Hola VGE, tengo un proyecto en mente...' name='message'></textarea>
+        <textarea rows="6" id='message' placeholder='Hola VGE, tengo un proyecto en mente...' name='message' required></textarea>
         </div>
-        <input class='form__button' type="button" value='Enviar'>
+        <input type="hidden" name="_subject" value="Nuevo correo enviado desde vge.cl">
+        <input class='form__button' type="submit" value='Enviar'>
         
       </form>
     </div>
   </div>
   `;
-    return view;
+  return view;
 };
 
 export default Contacto;

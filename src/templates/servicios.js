@@ -92,7 +92,7 @@ const Servicios = () => {
           <button class="modal-close">
             <i class="fas fa-times"></i>
           </button>
-          <figure>
+          <figure class="figure__estructural">
             <figcaption>
               <div class="modal__title modal__estructural"><h3>Ingeniería Estructural.</h3></div>
               <p>
@@ -276,8 +276,7 @@ const Servicios = () => {
       <div class="servicios-desktop__text">
         <h2>Nuestros Servicios</h2>
         <h3>
-          Uniendo tres ramas de la Ingeniería Civil, buscamos proyectar nuestra
-          nueva propuesta como ...
+        Nos comprometemos a entregar la asistencia profesional que tu proyecto requiere.
         </h3>
       </div>
 

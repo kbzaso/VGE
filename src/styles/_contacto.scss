@@ -138,22 +138,31 @@
     .elegirFecha {
       display: flex;
     }
-    .form__button {
-      background-color: $vgeOrange;
-      width: 100%;
-      border: none;
-      color: $vgeWhite;
-      height: 4rem;
-      margin-top: 1rem;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: $font-md;
-    }
-    .form__button:hover {
-      background-color: $vgeBlue;
-    }
-    .form__button:active {
-      background-color: $vgeOrange;
-    }
   }
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+textarea::placeholder {
+  color: rgba($color: $vgeWhite, $alpha: 0.3);
+}
+
+.form__button {
+  background-color: $vgeOrange;
+  width: 100%;
+  border: none;
+  color: $vgeWhite;
+  height: 4rem;
+  margin-top: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: $font-md;
+}
+.form__button:hover {
+  background-color: $vgeBlue;
+}
+.form__button:active {
+  background-color: $vgeOrange;
 }

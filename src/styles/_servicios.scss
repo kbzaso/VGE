@@ -344,6 +344,17 @@
   color: $vgeCian;
 }
 
+.modal__botonera {
+  margin-top: 2rem;
+}
+
+.modal__servicios__button {
+  background-color: $vgeBlue;
+}
+.modal__servicios__button:hover {
+  background-color: $vgeOrange;
+}
+
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -358,7 +369,7 @@
 
 figcaption {
   margin-bottom: 2rem;
-  margin-top: 5rem;
+  margin-top: 2rem;
   p {
   }
   li {
@@ -370,4 +381,8 @@ figcaption {
       color: $vgeOrange;
     }
   }
+}
+
+.figure__estructural {
+  margin-top: 8rem;
 }

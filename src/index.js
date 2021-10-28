@@ -9,8 +9,6 @@ import Footer from '@templates/footer.js';
 import '@styles/main.scss';
 
 import MicroModal from 'micromodal';
-// import '@utils/menu-mobile.js';
-// import logo from '@images/vge-logo.svg';
 
 (function App() {
   const nav = null || document.getElementById('nav');
@@ -138,7 +136,7 @@ const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
   }
 };
 
-// // CUANDO HAYA UN CLICK SE MUEVA AL SLIDE DE LA DERECHA
+// CUANDO HAYA UN CLICK SE MUEVA AL SLIDE DE LA DERECHA
 nextButton.addEventListener('click', (e) => {
   const currentSlide = track.querySelector('.current-card');
   const nextSlide = currentSlide.nextElementSibling;
@@ -641,6 +639,56 @@ buttonCloseVial.addEventListener('click', function () {
 });
 buttonCloseEstructural.addEventListener('click', function () {
   MicroModal.close('modal-2');
+});
+
+// FLUJO DE VIAJE EN MODAL INLIBILIARIO
+
+const modalButtonInmobiliario =
+  document.querySelector('.modal__botonera').children[0];
+
+modalButtonInmobiliario.addEventListener('click', function () {
+  MicroModal.show('modal-4');
+  MicroModal.close('modal-2');
+});
+
+const closeModalButtonInmobiliario =
+  document.getElementById('closeInmobiliario');
+
+closeModalButtonInmobiliario.addEventListener('click', function () {
+  MicroModal.close('modal-4');
+});
+
+const backModalButtonInmobiliario = document.getElementById(
+  'modal__back__inmobiliario'
+);
+
+backModalButtonInmobiliario.addEventListener('click', function () {
+  MicroModal.close('modal-4');
+  MicroModal.show('modal-2');
+});
+
+// FLIJO DE VIAJE EN MODAL INDUSTRIAL
+const modalButtonIndustrial =
+  document.querySelector('.modal__botonera').children[1];
+
+modalButtonIndustrial.addEventListener('click', function () {
+  MicroModal.show('modal-5');
+  MicroModal.close('modal-2');
+});
+
+const closeModalButtonIndustrial = document.getElementById('closeIndustrial');
+
+closeModalButtonIndustrial.addEventListener('click', function () {
+  MicroModal.close('modal-5');
+});
+
+const backModalButtonIndustrial = document.getElementById(
+  'modal__back__industrial'
+);
+
+backModalButtonIndustrial.addEventListener('click', function () {
+  MicroModal.close('modal-5');
+  MicroModal.show('modal-2');
 });
 
 /* IE Polyfull */
