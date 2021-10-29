@@ -13,3 +13,4 @@
 - Favicon
 - Scroll falla en mobile
 - Slider en desktop
+- Revisar z-index en mobile

@@ -7,16 +7,15 @@ import respaldo from '@images/preferirnos/respaldo.svg';
 const Preferirnos = () => {
   const view = `
     <div class="preferirnos">
-      <div class="preferirnos__botonera hide-for-desktop">
-        <button type="button" class="is-hidden preferirnos__botonera--left">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button type="button" class="preferirnos__botonera--right">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-
-      <div class="preferirnos__content container container--px">
+      <div class="preferirnos__content container ">
+        <div class="preferirnos__botonera hide-for-desktop">
+          <button type="button" class="is-hidden preferirnos__botonera--left">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button type="button" class="preferirnos__botonera--right">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
         <h2>Por qué Preferirnos</h2>
         <h3>
           Uniendo tres ramas de la Ingeniería Civil, buscamos proyectar nuestra

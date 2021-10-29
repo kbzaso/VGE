@@ -16,6 +16,16 @@
   }
   h3 {
     color: $vgeWhite;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .preferirnos__cards {
+    margin: 0 10rem;
+  }
+  @media (max-width: 600px) {
+    .preferirnos__cards {
+      margin: 0 2rem;
+    }
   }
   &__cards {
     display: flex;
@@ -92,13 +102,17 @@
       }
     }
   }
-  .preferirnos__botonera--left {
-    position: absolute;
-    left: 1rem;
-  }
-  .preferirnos__botonera--right {
-    position: absolute;
-    right: 1rem;
+  .preferirnos__botonera {
+    height: 100%;
+
+    &--left {
+      position: absolute;
+      left: 1rem;
+    }
+    &--right {
+      position: absolute;
+      right: 1rem;
+    }
   }
   &__nav {
     display: flex;
