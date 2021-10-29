@@ -51,11 +51,16 @@
     h4 {
       font-size: 1.9rem;
       margin-top: 3rem;
+      color: $vgeBlue;
+    }
+    p {
+      color: $vgeBlue;
     }
     a {
       max-width: 30%;
       &:visited {
         color: inherit;
+        color: $vgeBlue;
       }
     }
     .card {
