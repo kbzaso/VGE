@@ -2,9 +2,17 @@ import electrica from '@images/servicios/electrica/01.jpg';
 import electricaImgDos from '@images/servicios/electrica/02.jpg';
 import electricaImgTres from '@images/servicios/electrica/03.jpg';
 import vial from '@images/servicios/vial/01.jpg';
+import vialDos from '@images/servicios/vial/02.jpg';
+import vialTres from '@images/servicios/vial/03.jpg';
 import estructural from '@images/servicios/estructural/01.jpg';
+import estructuralDos from '@images/servicios/estructural/02.jpg';
+import estructuralTres from '@images/servicios/estructural/03.jpg';
 import inmobiliario from '@images/servicios/estructural/inmobiliario/01.jpg';
+import inmobiliarioDos from '@images/servicios/estructural/inmobiliario/02.jpg';
+import inmobiliarioTres from '@images/servicios/estructural/inmobiliario/03.jpg';
 import industrial from '@images/servicios/estructural/industrial/01.jpg';
+import industrialDos from '@images/servicios/estructural/industrial/02.jpg';
+import industrialTres from '@images/servicios/estructural/industrial/03.jpg';
 
 const serviciosDesktop = () => {
   const view = `
@@ -26,8 +34,8 @@ const serviciosDesktop = () => {
               <figure class="modal__electrica">
                 <div class="carousel">
                    <div class="carousel__button btn__electricaDesktop--left is-hidden">
-                    <i class="che fas fa-chevron-left"></i>
-                </div> 
+                      <i class="che fas fa-chevron-left"></i>
+                    </div> 
                   <div class="carousel__track-container">
                     <ul class="carousel__track-desktop-electrica">
                       <li class="carousel__slide current-card">
@@ -104,23 +112,37 @@ const serviciosDesktop = () => {
             <div class="sliderDesktop">
               <figure class="modal__electrica">
                 <div class="carousel">
-                  <!-- <div class="carousel__button carousel__button--left-desktop-electrica is-hidden">
+                  <div class="carousel__button carousel__button--left-desktop-estructural is-hidden">
                 <i class="che fas fa-chevron-left"></i>
-            </div> -->
+            </div>
                   <div class="carousel__track-container">
-                    <ul class="carousel__track-desktop-electrica">
-                      <li class="carousel__slide current-slide">
+                    <ul class="carousel__track-desktop-estructural">
+                      <li class="carousel__slide current-card">
                         <img
                           class="carousel__image"
                           src="${estructural}"
                           alt="Cables de alta tensión"
                         />
                       </li>
+                      <li class="carousel__slide current-card">
+                        <img
+                          class="carousel__image"
+                          src="${estructuralDos}"
+                          alt="Cables de alta tensión"
+                        />
+                      </li>
+                      <li class="carousel__slide current-card">
+                        <img
+                          class="carousel__image"
+                          src="${estructuralTres}"
+                          alt="Cables de alta tensión"
+                        />
+                      </li>
                     </ul>
                   </div>
-                  <!-- <div class="carousel__button carousel__button--right-desktop-electrica">
-                <i class="che fas fa-chevron-right"></i>
-            </div> -->
+                   <div class="carousel__button carousel__button--right-desktop-estructural">
+                       <i class="che fas fa-chevron-right"></i>
+                  </div> 
                 </div>
               </figure>
             </div>
@@ -172,23 +194,37 @@ const serviciosDesktop = () => {
             <div class="sliderDesktop">
               <figure class="modal__electrica">
                 <div class="carousel">
-                  <!-- <div class="carousel__button carousel__button--left-desktop-electrica is-hidden">
-                <i class="che fas fa-chevron-left"></i>
-            </div> -->
+                   <div class="carousel__button carousel__button--left-desktop-inmobiliario is-hidden">
+                    <i class="che fas fa-chevron-left"></i>
+                  </div>
                   <div class="carousel__track-container">
-                    <ul class="carousel__track-desktop-electrica">
-                      <li class="carousel__slide current-slide">
+                    <ul class="carousel__track-desktop-inmobiliario">
+                      <li class="carousel__slide current-card">
                         <img
                           class="carousel__image"
                           src="${inmobiliario}"
                           alt="Cables de alta tensión"
                         />
                       </li>
+                      <li class="carousel__slide current-slide">
+                        <img
+                          class="carousel__image"
+                          src="${inmobiliarioDos}"
+                          alt="Cables de alta tensión"
+                        />
+                      </li>
+                      <li class="carousel__slide current-slide">
+                        <img
+                          class="carousel__image"
+                          src="${inmobiliarioTres}"
+                          alt="Cables de alta tensión"
+                        />
+                      </li>
                     </ul>
                   </div>
-                  <!-- <div class="carousel__button carousel__button--right-desktop-electrica">
-                <i class="che fas fa-chevron-right"></i>
-            </div> -->
+                  <div class="carousel__button carousel__button--right-desktop-inmobiliario">
+                    <i class="che fas fa-chevron-right"></i>
+                  </div>
                 </div>
               </figure>
             </div>
@@ -214,7 +250,7 @@ const serviciosDesktop = () => {
                   </ul>
                   <div class="modal__botonera">
                     <button class="form__button modal__servicios__button" id="modal__back__inmobiliario">
-                    <i class="fas fa-arrow-left"></i> Volver
+                    <i class="che fas fa-chevron-left"></i> Volver
                     </button>
                   </div>
                 </div>
@@ -243,23 +279,38 @@ const serviciosDesktop = () => {
             <div class="sliderDesktop">
               <figure class="modal__electrica">
                 <div class="carousel">
-                  <!-- <div class="carousel__button carousel__button--left-desktop-electrica is-hidden">
-                <i class="che fas fa-chevron-left"></i>
-            </div> -->
+                  <div class="carousel__button carousel__button--left-desktop-industrial is-hidden">
+                    <i class="che fas fa-chevron-left"></i>
+                  </div>
                   <div class="carousel__track-container">
-                    <ul class="carousel__track-desktop-electrica">
-                      <li class="carousel__slide current-slide">
+                    <ul class="carousel__track-desktop-industrial">
+                      <li class="carousel__slide current-card">
                         <img
                           class="carousel__image"
                           src="${industrial}"
                           alt="Cables de alta tensión"
                         />
                       </li>
+                      <li class="carousel__slide current-slide">
+                        <img
+                          class="carousel__image"
+                          src="${industrialDos}"
+                          alt="Cables de alta tensión"
+                        />
+                      </li>
+                      <li class="carousel__slide current-slide">
+                        <img
+                          class="carousel__image"
+                          src="${industrialTres}"
+                          alt="Cables de alta tensión"
+                        />
+                      </li>
                     </ul>
+                  
                   </div>
-                  <!-- <div class="carousel__button carousel__button--right-desktop-electrica">
-                <i class="che fas fa-chevron-right"></i>
-            </div> -->
+                  <div class="carousel__button carousel__button--right-desktop-industrial">
+                    <i class="che fas fa-chevron-right"></i>
+                  </div>
                 </div>
               </figure>
             </div>
@@ -326,23 +377,37 @@ const serviciosDesktop = () => {
             <div class="sliderDesktop">
               <figure class="modal__vial">
                 <div class="carousel">
-                  <!-- <div class="carousel__button carousel__button--left-desktop-electrica is-hidden">
-                <i class="che fas fa-chevron-left"></i>
-            </div> -->
+                <div class="carousel__button carousel__button--left-desktop-vial is-hidden">
+                  <i class="che fas fa-chevron-left"></i>
+                </div>
                   <div class="carousel__track-container">
-                    <ul class="carousel__track carousel__track-vial">
-                      <li class="carousel__slide current-slide-vial">
+                    <ul class="carousel__track carousel__track-desktop-vial">
+                      <li class="carousel__slide current-card">
                         <img
                           class="carousel__image"
                           src="${vial}"
                           alt="Cables de alta tensión"
                         />
                       </li>
+                      <li class="carousel__slide current-card">
+                        <img
+                          class="carousel__image"
+                          src="${vialDos}"
+                          alt="Cables de alta tensión"
+                        />
+                      </li>
+                      <li class="carousel__slide current-slide-vial">
+                        <img
+                          class="carousel__image"
+                          src="${vialTres}"
+                          alt="Cables de alta tensión"
+                        />
+                      </li>
                     </ul>
                   </div>
-                  <!-- <div class="carousel__button carousel__button--right-desktop-electrica">
-                <i class="che fas fa-chevron-right"></i>
-            </div> -->
+                  <div class="carousel__button carousel__button--right-desktop-vial">
+                    <i class="che fas fa-chevron-right"></i>
+                  </div>
                 </div>
               </figure>
             </div>

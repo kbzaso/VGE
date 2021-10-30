@@ -42,7 +42,7 @@ const Servicios = () => {
             </div>
             <div class="carousel__track-container">
               <ul class="carousel__track">
-                <li class="carousel__slide current-slide">
+                <li class="carousel__slide current-card">
                   <img class='carousel__image' src="${electrica}" alt="Cables de alta tensión">
                 </li>
                 <li class="carousel__slide">
@@ -108,7 +108,7 @@ const Servicios = () => {
             </div>
             <div class="carousel__track-container">
               <ul class="carousel__track carousel__track-inmobiliario">
-                <li class="carousel__slide current-slide-inmobiliario">
+                <li class="carousel__slide current-card">
                   <img class='carousel__image' src="${inmobiliario}" alt="Cables de alta tensión">
                 </li>
                 <li class="carousel__slide current-slide-einmobiliario">
@@ -152,7 +152,7 @@ const Servicios = () => {
             </div>
             <div class="carousel__track-container">
               <ul class="carousel__track carousel__track-industrial">
-                <li class="carousel__slide current-slide-industrial">
+                <li class="carousel__slide current-card">
                   <img class='carousel__image' src="${industrial}" alt="Cables de alta tensión">
                 </li>
                 <li class="carousel__slide current-slide-industrial">
@@ -215,7 +215,7 @@ const Servicios = () => {
             </div>
             <div class="carousel__track-container">
               <ul class="carousel__track carousel__track-vial">
-                <li class="carousel__slide current-slide-vial">
+                <li class="carousel__slide current-card">
                   <img class='carousel__image' src="${vial}" alt="Cables de alta tensión">
                 </li>
                 <li class="carousel__slide current-slide-vial">
