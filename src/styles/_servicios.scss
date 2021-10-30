@@ -138,10 +138,14 @@
   }
 }
 
+.carousel__track-desktop-electrica li {
+  height: 40rem;
+}
+
 .modalMobile {
   position: fixed;
   // display: block;
-  z-index: 50;
+  z-index: 9;
   padding: 1rem 3rem;
   top: 4rem;
   bottom: 0;
@@ -243,7 +247,8 @@
   margin: 0 auto;
   // top: 6rem;
   overflow: hidden;
-  &__track {
+  &__track,
+  .carousel__track-desktop-electrica {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -282,6 +287,7 @@
     width: 6rem;
     height: 100%;
     cursor: pointer;
+    justify-content: center;
     &:active {
       background-color: transparent;
       border: none !important;
@@ -333,11 +339,9 @@
 .modal__estructural {
   margin-top: 10rem;
 }
-
-.slider__estructural {
+.industrialSection {
   margin-top: 5rem;
 }
-
 .icon {
   display: flex;
   justify-content: center;
@@ -358,18 +362,6 @@
 }
 .modal__servicios__button:hover {
   background-color: $vgeOrange;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(2rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 figcaption {

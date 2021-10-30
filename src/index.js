@@ -330,7 +330,7 @@ const prevButtonModalVial = document.querySelector(
   '.carousel__button--left-vial'
 );
 
-// // CAPTURAMOS EL ANCHO DE LOS SLIDES
+// CAPTURAMOS EL ANCHO DE LOS SLIDES
 const slideWidthModalVial = slidesModalVial[0].getBoundingClientRect().width;
 
 slidesModalVial.forEach((s, i) => {
@@ -347,7 +347,7 @@ const moveToSlideModalVial = (
   currentSlideModalVial.classList.remove('current-slide-vial');
   targetSlideModalVial.classList.add('current-slide-vial');
 };
-
+// HIDE ARROWS
 const hideShowArrowsModalVial = (
   slidesModalVial,
   prevButtonModalVial,
@@ -558,7 +558,7 @@ const hideShowArrowsModalIndustrial = (
     nextButtonModalIndustrial.classList.remove('is-hidden');
   } else if (targetIndexModalIndustrial === slidesModalIndustrial.length - 1) {
     prevButtonModalIndustrial.classList.remove('is-hidden');
-    nextButtonModalInmobiliario.classList.add('is-hidden');
+    nextButtonModalIndustrial.classList.add('is-hidden');
   } else {
     prevButtonModalIndustrial.classList.remove('is-hidden');
     nextButtonModalIndustrial.classList.remove('is-hidden');
@@ -584,7 +584,7 @@ nextButtonModalIndustrial.addEventListener('click', (e) => {
     slidesModalIndustrial,
     prevButtonModalIndustrial,
     nextButtonModalIndustrial,
-    prevIndexModalIndustrial
+    nextIndexModalIndustrial
   );
 });
 
@@ -893,4 +893,110 @@ picker.addEventListener('input', function (e) {
 
     alert('Weekends not allowed');
   }
+});
+
+// INGENIERIA SLIDER DESKTOP
+const trackDesktopElectrica = document.querySelector(
+  '.carousel__track-desktop-electrica'
+);
+const slidesDesktopElectrica = Array.from(trackDesktopElectrica.children);
+
+// BOTONES DE DESPLAZAMIENTO
+const nextButtonDesktopElectrica = document.querySelector(
+  '.btn__electricaDesktop--right'
+);
+const prevButtonDesktopElectrica = document.querySelector(
+  '.btn__electricaDesktop--left'
+);
+
+console.log(prevButtonDesktopElectrica);
+
+// CAPTURAMOS EL ANCHO DE LOS SLIDES
+const slideWidthDesktopElectrica = 340;
+
+// COLOCAR UN SLIDE AL LADO DEL OTRO
+const setSlidePositionDesktopElectrica = (slidesDesktopElectrica, index) => {
+  slidesDesktopElectrica.style.left = slideWidthDesktopElectrica * index + 'px';
+};
+
+slidesDesktopElectrica.forEach(setSlidePositionDesktopElectrica);
+
+const moveToSlideDesktopElectrica = (
+  trackDesktopElectrica,
+  currentSlideDesktopElectrica,
+  targetSlideDesktopElectrica
+) => {
+  trackDesktopElectrica.style.transform =
+    'translateX(-' + targetSlideDesktopElectrica.style.left + ')';
+  currentSlideDesktopElectrica.classList.remove('current-card');
+  targetSlideDesktopElectrica.classList.add('current-card');
+};
+
+// HIDE ARROWS
+const hideShowArrowsDesktopElectrica = (
+  slidesDesktopElectrica,
+  prevButtonDesktopElectrica,
+  nextButtonDesktopElectrica,
+  targetIndexDesktopElectrica
+) => {
+  if (targetIndexDesktopElectrica === 0) {
+    prevButtonDesktopElectrica.classList.add('is-hidden');
+    nextButtonDesktopElectrica.classList.remove('is-hidden');
+  } else if (
+    targetIndexDesktopElectrica ===
+    slidesDesktopElectrica.length - 1
+  ) {
+    prevButtonDesktopElectrica.classList.remove('is-hidden');
+    nextButtonDesktopElectrica.classList.add('is-hidden');
+  } else {
+    prevButtonDesktopElectrica.classList.remove('is-hidden');
+    nextButtonDesktopElectrica.classList.remove('is-hidden');
+  }
+};
+
+// CUANDO HAYA UN CLICK SE MUEVA AL SLIDE DE LA DERECHA
+nextButtonDesktopElectrica.addEventListener('click', (e) => {
+  const currentSlideDesktopElectrica =
+    trackDesktopElectrica.querySelector('.current-card');
+  const nextSlideDesktopElectrica =
+    currentSlideDesktopElectrica.nextElementSibling;
+  const nextIndexDesktopElectrica = slidesDesktopElectrica.findIndex(
+    (slide) => slide === nextSlideDesktopElectrica
+  );
+
+  // MOVER HACIA EL SIGUIENTE SLIDE
+  moveToSlideDesktopElectrica(
+    trackDesktopElectrica,
+    currentSlideDesktopElectrica,
+    nextSlideDesktopElectrica
+  );
+  hideShowArrowsDesktopElectrica(
+    slidesDesktopElectrica,
+    prevButtonDesktopElectrica,
+    nextButtonDesktopElectrica,
+    nextIndexDesktopElectrica
+  );
+});
+
+prevButtonDesktopElectrica.addEventListener('click', (e) => {
+  const currentSlideDesktopElectrica =
+    trackDesktopElectrica.querySelector('.current-card');
+  const prevSlideDesktopElectrica =
+    currentSlideDesktopElectrica.previousElementSibling;
+  const prevIndexDesktopElectrica = slidesDesktopElectrica.findIndex(
+    (slide) => slide === prevSlideDesktopElectrica
+  );
+
+  // MOVER HACIA EL SIGUIENTE SLIDE
+  moveToSlideDesktopElectrica(
+    trackDesktopElectrica,
+    currentSlideDesktopElectrica,
+    prevSlideDesktopElectrica
+  );
+  hideShowArrowsDesktopElectrica(
+    slidesDesktopElectrica,
+    prevButtonDesktopElectrica,
+    nextButtonDesktopElectrica,
+    prevIndexDesktopElectrica
+  );
 });

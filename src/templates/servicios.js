@@ -35,7 +35,7 @@ const Servicios = () => {
           </button>
 
           <figure class="modal__electrica">
-          // SLIDER IMAGE ELECTRICA
+
           <div class="carousel">
             <div class="carousel__button carousel__button--left is-hidden">
               <i class="che fas fa-chevron-left"></i>
@@ -101,10 +101,6 @@ const Servicios = () => {
             </figcaption>
           </figure>
 
-          <div class="icon cian">
-          <i class="fas fa-chevron-down"></i>
-          </div>
-
           <figure class="slider__estructural">
           <div class="carousel">
             <div class="carousel__button carousel__button--left carousel__button--left-inmobiliario is-hidden">
@@ -149,11 +145,7 @@ const Servicios = () => {
             </figcaption>
           </figure>
 
-          <div class="icon cian">
-          <i class="fas fa-chevron-down"></i>
-          </div>
-
-          <figure class="slider__estructural">
+          <figure class="slider__estructural industrialSection">
           <div class="carousel">
             <div class="carousel__button carousel__button--left carousel__button--left-industrial is-hidden">
               <i class="che fas fa-chevron-left"></i>

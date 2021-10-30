@@ -8,9 +8,6 @@
 
 ## Por hacer
 
-- imagenes optimizadas
-- Somethimes the modal slider mount each others
-- Favicon
-- Scroll falla en mobile
-- Slider en desktop
-- Revisar z-index en mobile
+- Imagenes optimizadas
+- Scroll falla en mobile [link](https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/)
+- Slider en servicios (Desktop)

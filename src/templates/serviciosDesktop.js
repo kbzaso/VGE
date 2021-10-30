@@ -1,4 +1,6 @@
 import electrica from '@images/servicios/electrica/01.jpg';
+import electricaImgDos from '@images/servicios/electrica/02.jpg';
+import electricaImgTres from '@images/servicios/electrica/03.jpg';
 import vial from '@images/servicios/vial/01.jpg';
 import estructural from '@images/servicios/estructural/01.jpg';
 import inmobiliario from '@images/servicios/estructural/inmobiliario/01.jpg';
@@ -23,23 +25,37 @@ const serviciosDesktop = () => {
             <div class="sliderDesktop">
               <figure class="modal__electrica">
                 <div class="carousel">
-                  <!-- <div class="carousel__button carousel__button--left-desktop-electrica is-hidden">
+                   <div class="carousel__button btn__electricaDesktop--left is-hidden">
                     <i class="che fas fa-chevron-left"></i>
-                </div> -->
+                </div> 
                   <div class="carousel__track-container">
                     <ul class="carousel__track-desktop-electrica">
-                      <li class="carousel__slide current-slide">
+                      <li class="carousel__slide current-card">
                         <img
                           class="carousel__image"
                           src="${electrica}"
                           alt="Cables de alta tensión"
                         />
                       </li>
+                      <li class="carousel__slide">
+                        <img
+                          class="carousel__image"
+                          src="${electricaImgDos}"
+                          alt="Cables de alta tensión"
+                        />
+                      </li>
+                      <li class="carousel__slide">
+                        <img
+                          class="carousel__image"
+                          src="${electricaImgTres}"
+                          alt="Cables de alta tensión"
+                        />
+                      </li>
                     </ul>
                   </div>
-                  <!-- <div class="carousel__button carousel__button--right-desktop-electrica">
+                   <div class="carousel__button carousel__button--right btn__electricaDesktop--right">
                     <i class="che fas fa-chevron-right"></i>
-                </div> -->
+                </div> 
                 </div>
               </figure>
             </div>
