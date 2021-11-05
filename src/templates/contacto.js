@@ -12,7 +12,7 @@ const Contacto = () => {
       <p>Ingresa tus datos en los recuadros correspondientes y cuéntanos cuál segmento horario te es óptimo para agendar una reunión. Nos pondremos en contacto contigo cuanto antes vía mail para concretar el encuentro online y conocer tu proyecto.</p>
     </div>
     <div class="contacto__form">
-      <form action="https://formsubmit.co/alejandro.sapa@gmail.com" method="POST">
+      <form action="https://formsubmit.co/vgespa.ingenieria@gmail.com" method="POST">
       <div class='name'>
           <label for="name">Nombre</label>
           <input id='name' class='effect-11' name='name' type="text" required>
