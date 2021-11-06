@@ -512,20 +512,6 @@ window.addEventListener('load', function () {
     }
   }
 });
-let dayString = day.toString();
-let finalDay = dayString.padStart(2, '0');
-let newDateWeek = `${year}-${month}-${finalDay}`;
-const picker = document.getElementById('date');
-picker.addEventListener('input', function (e) {
-  let day = new Date(this.value).getUTCDay();
-  if ([6, 0].includes(day)) {
-    console.log(newDateWeek);
-    e.preventDefault();
-    this.value = newDateWeek;
-
-    alert('Weekends not allowed');
-  }
-});
 
 // SLIDER INGENIERIA DESKTOP
 const trackDesktopElectrica = document.querySelector(

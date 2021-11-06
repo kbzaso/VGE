@@ -1,46 +1,46 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 4rem;
-    height: 14rem;
-    @include breakpoint-down(medium) {
-        height: 8rem;
-        align-items: center;
-        padding: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4rem;
+  height: 14rem;
+  @include breakpoint-down(medium) {
+    height: 8rem;
+    align-items: center;
+    padding: 0;
+  }
+  &__logo {
+    img {
+      width: 14rem;
     }
-    &__logo {
-        img {
-            width: 14rem;
-        }
+  }
+  &__menu {
+    text-align: center;
+    color: $vgeWhite;
+    font-weight: 200;
+    @include breakpoint-down(large) {
+      margin: 0 auto;
     }
-    &__menu {
-        text-align: center;
-        color: $vgeWhite;
-        font-weight: 200;
-        @include breakpoint-down(large) {
-            margin: 0 auto;
-        }
-        p {
-            @include breakpoint-down(medium) {
-                margin-top: 0;
-            }
-            margin-top: 3rem;
-            span {
-                color: $vgeOrange;
-                font-weight: 600;
-            }
-            margin-top: 3rem;
-        }
+    p {
+      @include breakpoint-down(medium) {
+        margin-top: 0;
+      }
+      margin-top: 3rem;
+      span {
+        color: $vgeOrange;
+        font-weight: 600;
+      }
+      margin-top: 3rem;
     }
-    &__rrss {
-        font-size: 2rem;
-        color: $vgeWhite;
-        a {
-            color: $vgeWhite;
-            &:hover {
-                color: $vgeCian;
-                transition: color 200ms ease-in-out;
-            }
-        }
+  }
+  &__rrss {
+    font-size: 2rem;
+    color: $vgeWhite;
+    a {
+      color: $vgeWhite;
+      &:hover {
+        color: $vgeCian;
+        transition: color 200ms ease-in-out;
+      }
     }
+  }
 }
