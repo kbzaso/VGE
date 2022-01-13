@@ -16,6 +16,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Deploy on Netlify
 
 The easiest way to deploy this app is to use the [Netlify Platform](https://www.netlify.com/).
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# cryptoapp
