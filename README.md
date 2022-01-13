@@ -1,13 +1,21 @@
 # VGE Ingeniería
 
-✅ Base Webpack
+This landing page use HTML, SASS, Javascript and Webpack for compile the whole app.
 
-- Estructura HTML
-- Estilos CSS
-- Interacción Js
+## Getting Started
 
-## Por hacer
+First, run the development server:
 
-- Imagenes optimizadas
-- Scroll falla en mobile [link](https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/)
-- Slider en servicios (Desktop)
+```
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+## Deploy on Netlify
+
+The easiest way to deploy this app is to use the [Netlify Platform](https://www.netlify.com/).
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# cryptoapp
